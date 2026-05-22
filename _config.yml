@@ -4,7 +4,7 @@ title: 天月将白
 SEOTitle: qqz的博客 | qqz Blog
 header-img: img/post-bg-desk.jpg
 email: 2393474010@sjtu.edu.cn
-description: "Every failure is leading towards success."
+description: "May all the beauty be blessed."
 keyword: "qqz, qqz的博客, 电池, 固态电池, 界面, 机器学习"
 url: "https://dazzlemoon.github.io"       # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -56,17 +56,17 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-disqus_username: dazzlemoon
+# disqus_username: dazzlemoon
 
 # # Gitalk
-# gitalk:
-#   enable: true    #是否开启Gitalk评论
-#   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-#   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-#   repo: qiubaiying.github.io    #仓库名称
-#   owner: qiubaiying    #github用户名
-#   admin: qiubaiying
-#   distractionFreeMode: true #是否启用类似FB的阴影遮罩
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: Ov23libEeMhATxTL5X4f                         #生成的clientID
+  clientSecret: af947e26934f1da6e4d143fc2c09f063d4223934   #生成的clientSecret
+  repo: dazzlemoon.github.io    #仓库名称
+  owner: dazzlemoon    #github用户名
+  admin: dazzlemoon
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
 # 统计
