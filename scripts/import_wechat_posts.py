@@ -85,6 +85,19 @@ POSTS_CONFIG = [
         "replacements": [(r"图片/", "/img/posts/liu-fire/")],
     },
     {
+        "src": WECHAT / "核磁谱解析" / "Patel文章" / "公众号稿-Patel2023-电荷簇集-NMR与DFT.md",
+        "slug": "patel2023-2lix-gaf3",
+        "filename": "2026-05-22-Patel2023-电荷簇集-NMR与DFT.md",
+        "date": "2026-05-22",
+        "title": "LiCl 反而最快？Patel 2023 用固体 NMR + DFT 揭开 2LiX–GaF₃ 里的「电荷簇」",
+        "subtitle": "Science Advances：2LiCl–GaF₃ 室温 3.2 mS/cm，却和纯 LiCl 趋势相反；多核 NMR 看见快/慢 Li⁺，GIPAW 算清 ¹⁹F 化学位移与 ⁷¹Ga 四极耦合",
+        "tags": ["固态电池", "NMR", "核磁", "GIPAW", "电解质"],
+        "image_dirs": [
+            (WECHAT / "核磁谱解析" / "Patel文章" / "images", None),
+        ],
+        "replacements": [(r"images/", "/img/posts/patel2023-2lix-gaf3/")],
+    },
+    {
         "src": WECHAT / "Kim-文章介绍" / "2026kim-polarizable-multipoles-wechat.md",
         "slug": "kim-polar",
         "filename": "2026-05-17-Kim2026-可极化多极矩长程电静学.md",
