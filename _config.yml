@@ -63,9 +63,9 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: Ov23libEeMhATxTL5X4f                         #生成的clientID
   clientSecret: af947e26934f1da6e4d143fc2c09f063d4223934   #生成的clientSecret
-  repo: dazzlemoon.github.io    #仓库名称
-  owner: dazzlemoon    #github用户名
-  admin: dazzlemoon
+  repo: blog-comments    #仓库名称
+  owner: Dazzlemoon    #github用户名
+  admin: Dazzlemoon
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
