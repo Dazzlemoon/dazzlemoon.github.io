@@ -47,6 +47,10 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
+  math_engine: mathjax
+  math_engine_opts:
+    preview: false
+    previewAsCode: false
 
 
 
