@@ -20,7 +20,7 @@ POSTS_CONFIG = [
         "image_dirs": [
             (WECHAT / "电池领域思路" / "Kim界面文章介绍" / "images", None),
         ],
-        "replacements": [(r"images/", "img/posts/kim2024-llzo/")],
+        "replacements": [(r"images/", "/img/posts/kim2024-llzo/")],
     },
     {
         "src": WECHAT / "电池领域思路" / "谱学知识" / "公众号稿-红外拉曼声子谱-原理数学与电池应用.md",
@@ -54,8 +54,8 @@ POSTS_CONFIG = [
             ),
         ],
         "replacements": [
-            ("./zhou2025_imgs/", "img/posts/zhou2025/"),
-            ("zhou2025_imgs/", "img/posts/zhou2025/"),
+            ("./zhou2025_imgs/", "/img/posts/zhou2025/"),
+            ("zhou2025_imgs/", "/img/posts/zhou2025/"),
         ],
     },
     {
@@ -69,7 +69,7 @@ POSTS_CONFIG = [
         "image_dirs": [
             (WECHAT / "屏蔽材料开发介绍" / "Koker文章介绍" / "images", None),
         ],
-        "replacements": [(r"images/", "img/posts/koker-pft/")],
+        "replacements": [(r"images/", "/img/posts/koker-pft/")],
     },
     {
         "src": WECHAT / "屏蔽材料开发介绍" / "Liu文章FIRE介绍" / "2026liu-fire-wechat.md",
@@ -82,7 +82,7 @@ POSTS_CONFIG = [
         "image_dirs": [
             (WECHAT / "屏蔽材料开发介绍" / "Liu文章FIRE介绍" / "图片", None),
         ],
-        "replacements": [(r"图片/", "img/posts/liu-fire/")],
+        "replacements": [(r"图片/", "/img/posts/liu-fire/")],
     },
     {
         "src": WECHAT / "Kim-文章介绍" / "2026kim-polarizable-multipoles-wechat.md",
@@ -95,7 +95,7 @@ POSTS_CONFIG = [
         "image_dirs": [
             (WECHAT / "Kim-文章介绍" / "imgs" / "paper", "paper"),
         ],
-        "replacements": [(r"imgs/paper/", "img/posts/kim-polar/paper/")],
+        "replacements": [(r"imgs/paper/", "/img/posts/kim-polar/paper/")],
     },
 ]
 
