@@ -2,7 +2,7 @@
 layout:     post
 title:      全固态电池界面会怎么坏？Kim 2024 用机器学习势「看见」LLZO|LCO 降解全过程
 subtitle:   美国 Livermore 实验室用专用 MLIP 做万原子、纳秒级界面模拟，讲清 Li 贫/富如何左右互混、Co 如何钻进石榴石并在晶界成团
-date:       2026-05-20
+date:       2026-05-21
 author:     qqz
 header-img: img/post-bg-desk.jpg
 catalog:    true
