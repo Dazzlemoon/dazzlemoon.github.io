@@ -1,9 +1,9 @@
 # Site settings
 # Site settings
 title: 天月将白
-SEOTitle: qqz的博客 | BY Blog
+SEOTitle: qqz的博客 | qqz Blog
 header-img: img/post-bg-desk.jpg
-email: qiubaiying@gmail.com
+email: 2393474010@sjtu.edu.cn
 description: "Every failure is leading towards success."
 keyword: "qqz, qqz的博客, 电池, 固态电池, 界面, 机器学习"
 url: "https://dazzlemoon.github.io"       # your host, for absolute URL
@@ -12,8 +12,8 @@ github_repo: "https://github.com/Dazzlemoon/Dazzlemoon.github.io.git"
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "赤日几时过，清风无处寻"
+sidebar-avatar: /img/云曦1-2.jpg     # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -25,6 +25,12 @@ github_username:    Dazzlemoon
 # facebook_username:  baiying.qiu.7
 # jianshu_username:   e71990ada2fd
 
+
+# Build settings
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","scripts"]
+anchorjs: true
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
