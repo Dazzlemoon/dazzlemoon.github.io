@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="45%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f766e" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0d9488"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="40" y="32" width="1520" height="120" rx="16" fill="#ffffff" opacity="0.95" stroke="#5eead4" stroke-width="2"/>
+  <text x="72" y="82" fill="#115e59" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="38" font-weight="700">能捏成黏土的镁电解质 - Yang 2024</text>
+  <text x="72" y="122" fill="#334155" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="20">1MgCl2-GaF3 | 0.47 mS/cm | 部分阴离子交换 | Mg 版 Patel Li 黏土</text>
+
+  <g filter="url(#shadow)">
+    <rect x="56" y="180" width="460" height="280" rx="14" fill="#ffffff" stroke="#14b8a6" stroke-width="2"/>
+    <text x="86" y="222" fill="#0f766e" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="24" font-weight="700">论文亮点</text>
+    <text x="86" y="262" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- 球磨非晶，可 knead 成黏土</text>
+    <text x="86" y="294" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- 室温离子电导约 0.47 mS/cm</text>
+    <text x="86" y="326" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- Mo6S8 全电池 500 圈容量保持</text>
+    <text x="86" y="358" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- Mg 负极 + O catholyte 兼容</text>
+    <rect x="86" y="382" width="400" height="58" rx="10" fill="#ccfbf1" stroke="#99f6e4"/>
+    <text x="100" y="418" fill="#0f766e" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17" font-weight="600">核心体系：1MgCl2-GaF3 @ 25C</text>
+
+    <rect x="56" y="490" width="460" height="360" rx="14" fill="#ffffff" stroke="#38bdf8" stroke-width="2"/>
+    <text x="86" y="532" fill="#0369a1" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="24" font-weight="700">机制要点</text>
+    <text x="86" y="572" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- 部分 Cl/F 交换，非完全转化</text>
+    <text x="86" y="604" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- 非晶相含 MgF2/GaCl3 特征</text>
+    <text x="86" y="636" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- 欠配位 Mg：MM CN小于5，Cl 桥</text>
+    <text x="86" y="668" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- Cl 桥连 Mg 多面体，利于传导</text>
+    <rect x="86" y="692" width="400" height="138" rx="10" fill="#e0f2fe" stroke="#bae6fd"/>
+    <text x="100" y="728" fill="#075985" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16" font-weight="600">DeepMD：900 K 下 Cl/F 交换</text>
+    <text x="100" y="758" fill="#075985" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">加速 MD 揭示局部结构演化</text>
+    <text x="100" y="786" fill="#64748b" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="14">Adv. Energy Mater. 2024, 2400163</text>
+
+    <rect x="548" y="180" width="500" height="670" rx="14" fill="#ffffff" stroke="#a78bfa" stroke-width="2"/>
+    <text x="578" y="222" fill="#6d28d9" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="24" font-weight="700">组会延伸 - NMR 追问</text>
+    <text x="578" y="262" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- Yang 原文无固体 NMR</text>
+    <text x="578" y="294" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- Patel Li 系：NMR + GIPAW 指认</text>
+    <text x="578" y="326" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- 组会关注：GaF3 预处理 + 痕量水</text>
+    <text x="578" y="358" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- ssNMR：19F 约 190 ppm 等信号</text>
+    <text x="578" y="390" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18">- 区分 Mg 体系 Clay 定义差异</text>
+
+    <line x1="578" y1="420" x2="1020" y2="420" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="578" y="458" fill="#334155" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18" font-weight="600">Patel 式 GIPAW 路线</text>
+    <text x="578" y="492" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">结构候选 + VASP GIPAW（19F / 71Ga）</text>
+    <text x="578" y="524" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">与实验化学位移对照，辅助 MD 快照</text>
+
+    <rect x="578" y="560" width="440" height="110" rx="12" fill="#f5f3ff" stroke="#ddd6fe"/>
+    <text x="598" y="600" fill="#5b21b6" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17" font-weight="600">研究价值</text>
+    <text x="598" y="630" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">Mg 黏土电解质：机制 + 局部结构</text>
+    <text x="598" y="654" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">NMR 指认可借 GIPAW 补全</text>
+
+    <rect x="578" y="690" width="440" height="140" rx="12" fill="#fffbeb" stroke="#fde68a"/>
+    <text x="598" y="728" fill="#b45309" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16" font-weight="600">对照 Patel 2023（Li 黏土）</text>
+    <text x="598" y="758" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">2LiCl-GaF3：3.2 mS/cm + charge clustering</text>
+    <text x="598" y="784" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">同 GaF3 球磨思路，迁移到 Mg 体系</text>
+
+    <rect x="1080" y="180" width="464" height="670" rx="14" fill="#ffffff" stroke="#fb923c" stroke-width="2"/>
+    <text x="1110" y="222" fill="#c2410c" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="24" font-weight="700">Clay vs Powder（两套定义）</text>
+    <rect x="1110" y="248" width="404" height="180" rx="10" fill="#fff7ed" stroke="#fed7aa"/>
+    <text x="1130" y="282" fill="#9a3412" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17" font-weight="600">Yang 2024</text>
+    <text x="1130" y="312" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16">计量比：x 在 0.75-1.25</text>
+    <text x="1130" y="340" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16">部分交换 + 欠配位 Mg</text>
+    <text x="1130" y="368" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16">x=1.5 粉末相分离更明显</text>
+
+    <rect x="1110" y="448" width="404" height="180" rx="10" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="1130" y="482" fill="#166534" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17" font-weight="600">组会实验 2026</text>
+    <text x="1130" y="512" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16">固定 1:1，GaF3 200C 预处理</text>
+    <text x="1130" y="540" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16">Clay 含水（FTIR / 1H NMR）</text>
+    <text x="1130" y="568" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16">痕量水影响 Mg 局部环境</text>
+
+    <path d="M1330 640 L1330 720" stroke="#0d9488" stroke-width="3" marker-end="url(#arr)"/>
+    <text x="1140" y="760" fill="#0f766e" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18" font-weight="700">对照 Yang，补 NMR + 结构指认</text>
+    <text x="1140" y="800" fill="#64748b" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">Ceder 组 - LBNL / UC Berkeley</text>
+  </g>
+</svg>
