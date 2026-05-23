@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="50%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#faf5ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1e3a8a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="36" y="28" width="1528" height="118" rx="14" fill="#ffffff" opacity="0.94" stroke="#93c5fd" stroke-width="2"/>
+  <text x="80" y="76" fill="#1e3a8a" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="40" font-weight="700">DPA4 短程 × SOG 长程：能否接棒 MACE-POLAR-1？</text>
+  <text x="80" y="118" fill="#334155" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="19">Kim 可极化多极框架 · DeepMD DPA4/SeZM · SOG 可学习高斯和 · MACE-POLAR-1 对照</text>
+  <g filter="url(#shadow)">
+    <rect x="48" y="170" width="470" height="300" rx="14" fill="#ffffff" stroke="#60a5fa" stroke-width="2"/>
+    <text x="78" y="212" fill="#1d4ed8" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="22" font-weight="700">DPA4 短程强项</text>
+    <text x="78" y="252" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">· SO(2) 边局部等变 + Attention</text>
+    <text x="78" y="284" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">· ZBL 管极短程核排斥</text>
+    <text x="78" y="316" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">· torch.compile 力损失训练加速</text>
+    <text x="78" y="348" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">· Matbench / SPICE 短程 PES 极强</text>
+    <rect x="88" y="372" width="390" height="78" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <text x="102" y="404" fill="#1e40af" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16" font-weight="600">刻意不做：显式 1/r 库仑 · BEC/IR 头</text>
+    <text x="102" y="432" fill="#64748b" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="14">长程应交给 SOG，而非指望 DPA4 隐式学出</text>
+    <rect x="48" y="490" width="470" height="360" rx="14" fill="#ffffff" stroke="#34d399" stroke-width="2"/>
+    <text x="78" y="532" fill="#047857" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="22" font-weight="700">SOG 长程 vs LES(erf)</text>
+    <text x="78" y="572" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">· 可学习 Sum-of-Gaussians 核</text>
+    <text x="78" y="604" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">· BSA 初值 + 实/倒空间自洽</text>
+    <text x="78" y="636" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">· Kim 框架即插即用（q / u / Q / iq / iu）</text>
+    <text x="78" y="668" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">· 周期固体（MAPbI3、氧化物）更灵活</text>
+    <rect x="88" y="692" width="390" height="138" rx="10" fill="#ecfdf5" stroke="#86efac" stroke-width="1.5"/>
+    <text x="102" y="726" fill="#166534" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15" font-weight="600">开源：github.com/Dazzlemoon/sog</text>
+    <text x="102" y="756" fill="#166534" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="14">相对 LES：长程核本身也可训练</text>
+    <text x="102" y="784" fill="#166534" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="14">U = U_sr + U_elec(SOG) + sum(U_iq + U_iu)</text>
+    <rect x="548" y="170" width="504" height="680" rx="14" fill="#ffffff" stroke="#a78bfa" stroke-width="2"/>
+    <text x="578" y="212" fill="#6d28d9" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="22" font-weight="700">谁更可能占优？（分场景）</text>
+    <text x="578" y="258" fill="#334155" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17" font-weight="600">MACE-POLAR-1</text>
+    <text x="586" y="288" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16">分子 foundation · 开壳/Q/S · 蛋白配体</text>
+    <text x="578" y="332" fill="#334155" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17" font-weight="600">SOG + 强短程</text>
+    <text x="586" y="362" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16">离子固体 · 极性 bulk · BEC/IR/Raman</text>
+    <text x="578" y="406" fill="#334155" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17" font-weight="600">纯 DPA4</text>
+    <text x="586" y="436" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16">中性材料 MD · 训练预算极紧 · 先要 PES</text>
+    <line x1="578" y1="468" x2="1020" y2="468" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="578" y="508" fill="#0f766e" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18" font-weight="700">DPA4 + SOG 定位</text>
+    <text x="578" y="544" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">材料向超强短程 × Kim/SOG 可极化长程</text>
+    <text x="578" y="576" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">MAPbI3 / 氧化物 / 水：对标 CACE-SOG</text>
+    <text x="578" y="608" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="17">带电缺陷：DPA4-SOG-iq 补 Q 短板</text>
+    <rect x="568" y="636" width="464" height="192" rx="12" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+    <text x="588" y="674" fill="#5b21b6" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16" font-weight="600">下一步（工程）</text>
+    <text x="588" y="706" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">① DPA4 增加 SOG output module</text>
+    <text x="588" y="734" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">② readout q,u,Q,kappa,alpha · 统一 compile/FFT</text>
+    <text x="588" y="762" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">③ ablation：DPA4 vs DPA4-SOG-r vs uiu</text>
+    <text x="588" y="790" fill="#64748b" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="13">理论组合合理，待 benchmark 验证</text>
+    <rect x="1082" y="170" width="470" height="680" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <text x="1112" y="212" fill="#b45309" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="22" font-weight="700">架构示意</text>
+    <rect x="1130" y="240" width="374" height="88" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="1150" y="278" fill="#1e40af" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18" font-weight="700">DPA4 短程 U_sr</text>
+    <text x="1150" y="306" fill="#64748b" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="14">SeZM · Attention · ZBL(r-&gt;0)</text>
+    <path d="M1317 328 L1317 358" stroke="#2563eb" stroke-width="3" marker-end="url(#arr)"/>
+    <rect x="1130" y="360" width="374" height="88" rx="12" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+    <text x="1150" y="398" fill="#047857" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18" font-weight="700">SOG 长程 U_elec</text>
+    <text x="1150" y="426" fill="#64748b" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="14">Ewald + 可学习高斯和 · r &gt;= r_c</text>
+    <path d="M1317 448 L1317 478" stroke="#2563eb" stroke-width="3" marker-end="url(#arr)"/>
+    <rect x="1130" y="480" width="374" height="88" rx="12" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="1150" y="518" fill="#6d28d9" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="18" font-weight="700">诱导响应 U_iq + U_iu</text>
+    <text x="1150" y="546" fill="#64748b" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="14">一次 induced · BEC / 极化率 / 光谱</text>
+    <rect x="1130" y="600" width="374" height="220" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="1150" y="638" fill="#92400e" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="16" font-weight="700">四句话总结</text>
+    <text x="1150" y="672" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">1. DPA4 赢短程，不含显式长程</text>
+    <text x="1150" y="700" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">2. SOG 赢可学习核 + 周期一致</text>
+    <text x="1150" y="728" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">3. MACE-POLAR 赢分子 foundation</text>
+    <text x="1150" y="756" fill="#475569" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="15">4. DPA4+SOG 值得做 ablation</text>
+    <text x="1150" y="796" fill="#94a3b8" font-family="Microsoft YaHei UI,PingFang SC,sans-serif" font-size="13">原创内容总结卡 · 非论文原图</text>
+  </g>
+</svg>
