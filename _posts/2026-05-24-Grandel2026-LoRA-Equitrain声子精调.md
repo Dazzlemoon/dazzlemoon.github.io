@@ -2,7 +2,7 @@
 layout:     post
 title:      10 帧 DFT 就能修声子？LoRA 精调 MLIP 的新玩法
 subtitle:   Grandel Equitrain（LoRA）与 Koker PFT 两条微调思路并排：少数据补丁 vs Hessian 直督；少数据就能把 MACE 声子拉回来的实践笔记。
-date:       2026-05-25
+date:       2026-05-24
 author:     qqz
 header-img: img/post-bg-desk.jpg
 catalog:    true
@@ -202,4 +202,3 @@ $$
 - Koker T, Gangan A, Kotak M, et al. **PFT: Phonon Fine-tuning for Machine Learned Interatomic Potentials**. arXiv:2601.07742, 2026.  
   https://arxiv.org/abs/2601.07742
 - Equitrain 代码库：https://github.com/BAMeScience/equitrain
-
