@@ -20,14 +20,14 @@ tags:
 
 ## 0. 导读：为什么要学 IBZ 路径
 
-在固体物理与材料计算里，**能带图**和**声子色散图**几乎总是画在「高对称路径」上——例如 $\Gamma\!\to\!X\!\to\!M\!\to\!\Gamma$。这条路径不是随意折线，而是 **第一布里渊区（BZ）** 中 **不可约布里渊区（IBZ）** 的骨架。
+在固体物理与材料计算里，**能带图**和**声子色散图**几乎总是画在「高对称路径」上——例如 $\Gamma\,\to\,X\,\to\,M\,\to\,\Gamma$。这条路径不是随意折线，而是 **第一布里渊区（BZ）** 中 **不可约布里渊区（IBZ）** 的骨架。
 
 对 **PRDNet** 一类「倒易空间全局指纹」模型而言：
 
 | 采样方式 | 变量 | 典型物理场景 |
 |----------|------|--------------|
 | **Miller 集** $H$ | 整数 $(h,k,l)$，对应离散倒格点 $\mathbf{G}$ | X 射线 / 电子衍射（静态结构因子） |
-| **IBZ 路径** $\{\mathbf{q}_\ell\}$ | 连续波矢 $\mathbf{q}$ 沿高对称折线 | 声子色散、介电响应、红外/拉曼 |
+| **IBZ 路径** $\{\mathbf{q}\_\ell\}$ | 连续波矢 $\mathbf{q}$ 沿高对称折线 | 声子色散、介电响应、红外/拉曼 |
 
 二者都是 Bloch 相位 $e^{i\mathbf{q}\cdot\mathbf{r}}$ 下的**全结构相干求和**，但 **$\mathbf{q}$ 才是谱学色散的 native 坐标**。下文从基本概念出发建立公式链，最后一节简述 Miller → IBZ 的 PRD 改写思路。
 
@@ -129,10 +129,10 @@ $$
 
 | 名称 | 符号 | 与笛卡尔关系 |
 |------|------|--------------|
-| 分数倒易坐标 | $\mathbf{k}_{\mathrm{frac}}=(k_1,k_2,k_3)$ | $\mathbf{k}_{\mathrm{cart}} = k_1\mathbf{b}_1+k_2\mathbf{b}_2+k_3\mathbf{b}_3 = \mathbf{k}_{\mathrm{frac}}\,\mathbf{B}$ |
-| 笛卡尔倒易坐标 | $\mathbf{k}_{\mathrm{cart}}$ | 单位 Å$^{-1}$，满足 $e^{i\mathbf{k}\cdot\mathbf{r}}$ |
+| 分数倒易坐标 | $\mathbf{k}\_{\mathrm{frac}}=(k\_1,k\_2,k\_3)$ | $\mathbf{k}\_{\mathrm{cart}} = k\_1\mathbf{b}\_1+k\_2\mathbf{b}\_2+k\_3\mathbf{b}\_3 = \mathbf{k}\_{\mathrm{frac}}\,\mathbf{B}$ |
+| 笛卡尔倒易坐标 | $\mathbf{k}\_{\mathrm{cart}}$ | 单位 Å$^{-1}$，满足 $e^{i\mathbf{k}\cdot\mathbf{r}}$ |
 
-**注意**：Miller 指数 $(h,k,l)$ 与 $\mathbf{k}_{\mathrm{frac}}$ 在数值上常一致（即 $\mathbf{k}_{\mathrm{frac}}=(h,k,l)$ 时 $\mathbf{k}_{\mathrm{cart}}=\mathbf{G}$），但 **BZ 内的 $\mathbf{k}$ 一般是分数坐标，不必为整数**。
+**注意**：Miller 指数 $(h,k,l)$ 与 $\mathbf{k}\_{\mathrm{frac}}$ 在数值上常一致（即 $\mathbf{k}\_{\mathrm{frac}}=(h,k,l)$ 时 $\mathbf{k}\_{\mathrm{cart}}=\mathbf{G}$），但 **BZ 内的 $\mathbf{k}$ 一般是分数坐标，不必为整数**。
 
 ---
 
@@ -171,7 +171,7 @@ $$
 \mathcal{Q}_{\mathrm{path}} = \{\mathbf{q}(t) : t\in[0,1]\} \subset \mathrm{IBZ}.
 $$
 
-离散为 $N_q$ 个点 $\{\mathbf{q}_\ell\}_{\ell=1}^{N_q}$ 后，可用于：
+离散为 $N_q$ 个点 $\{\mathbf{q}\_\ell\}\_{\ell=1}^{N\_q}$ 后，可用于：
 
 1. 画色散图（能带 / 声子）；
 2. 作为神经网络的全局倒易探针（PRD 的 IBZ 路径模式）。
@@ -203,10 +203,10 @@ $$
 
 ### 4.3 常见高对称点（立方晶系，原胞为立方）
 
-| 符号 | 分数坐标 $\mathbf{k}_{\mathrm{frac}}$ | 几何位置 |
+| 符号 | 分数坐标 $\mathbf{k}\_{\mathrm{frac}}$ | 几何位置 |
 |------|--------------------------------------|----------|
 | $\Gamma$ | $(0,0,0)$ | BZ 中心 |
-| $X$ | $(1/2,0,0)$ | 面心（$k_x$ 方向） |
+| $X$ | $(1/2,0,0)$ | 面心（$k\_x$ 方向） |
 | $M$ | $(1/2,1/2,0)$ | 棱中点 |
 | $R$ | $(1/2,1/2,1/2)$ | 体对角顶点 |
 
@@ -224,7 +224,7 @@ $$
 \mathbf{q}(t) = (1-t)\,\mathbf{q}_A + t\,\mathbf{q}_B, \quad t\in[0,1].
 $$
 
-多段路径（如 $\Gamma\!\to\!X\!\to\!M\!\to\!\Gamma$）在每段上分别参数化，再按弧长或等分点数 $N_q$ 离散。
+多段路径（如 $\Gamma\,\to\,X\,\to\,M\,\to\,\Gamma$）在每段上分别参数化，再按弧长或等分点数 $N_q$ 离散。
 
 **seekpath** 根据空间群自动给出标准路径标签（如 `GXMG`）及分数坐标。
 
@@ -277,7 +277,7 @@ $$
 \mathbf{v}_n(\mathbf{k}) = \frac{1}{\hbar}\,\nabla_{\mathbf{k}} E_n(\mathbf{k}).
 $$
 
-色散关系斜率 $|dE/dk|$ 大处群速度高；极值点处群速度为零。
+色散关系斜率 $\lvert dE/dk \rvert$ 大处群速度高；极值点处群速度为零。
 
 ### 5.5 $\Gamma$ 点的 LO–TO 分裂（与 BZ 的关系）
 
@@ -297,10 +297,10 @@ $$
 
 这一现象称为 **LO–TO 分裂**（LO–TO splitting）。
 
-**为何与布里渊区有关？** 分裂是 **BZ 中心 $\mathbf{q}=\mathbf{0}$ 处、$q\to 0$ 长波长极限** 的效应，而非 $X,M,R$ 等高 $|q|$ 边界点的专属现象：
+**为何与布里渊区有关？** 分裂是 **BZ 中心 $\mathbf{q}=\mathbf{0}$ 处、$q\to 0$ 长波长极限** 的效应，而非 $X,M,R$ 等高 $\lvert q \rvert$ 边界点的专属现象：
 
 1. **物理机制**：极性晶体中，LO 模伴随 **宏观极化** $\mathbf{P}$；在 $q\to 0$ 时激发 **退极化宏观电场** $\mathbf{E}$，抬高 LO 频率。TO 模位移 $\perp\mathbf{q}$，不产生该宏观场，频率较低。
-2. **$\Gamma$ 是色散图的锚点**：标准 IBZ 路径（如 $\Gamma\!\to\!X\!\to\!M\!\to\!\Gamma$）**必须回到 $\Gamma$**，才能在图上读出 LO/TO 是否在中心分开。
+2. **$\Gamma$ 是色散图的锚点**：标准 IBZ 路径（如 $\Gamma\,\to\,X\,\to\,M\,\to\,\Gamma$）**必须回到 $\Gamma$**，才能在图上读出 LO/TO 是否在中心分开。
 3. **动力学矩阵在 $\Gamma$ 非解析**：仅含短程力常数的 $D(\mathbf{q})$ 在 $\mathbf{q}\to\mathbf{0}$ 时对纵/横行为不同；DFPT/Phonopy 需在 $\Gamma$ 邻域加入 **非解析修正（NAC）**，依赖高频介电常数 $\varepsilon\_\infty$ 与 **Born 有效电荷** $Z^{\ast}$：
 
 $$
@@ -308,7 +308,7 @@ D_{\alpha\beta}(\mathbf{q}\to\mathbf{0}) \;\;\text{对 LO/TO 给出不同极限}
 $$
 
 4. **与 MLIP / PRD 的关联**：纯短程 MLIP 或固定电荷库仑项常在 $\Gamma$ **合并 LO/TO 为一条**；CACE+LES、MTP+EDQRd（Korogod et al., 2026）等 **环境依赖电荷 + 长程静电** 路线，目标正是从势函数导数构造 NAC，恢复 $\Gamma$ 点分裂。  
-   这也是 PRD 从 Miller 高 $|\mathbf{h}|$ 采样转向 **含 $\Gamma$ 的 IBZ 低 $q$ 路径** 的动机之一——$\Gamma$ 邻域电响应与 LO–TO、介电常数直接相关。
+   这也是 PRD 从 Miller 高 $\lvert \mathbf{h} \rvert$ 采样转向 **含 $\Gamma$ 的 IBZ 低 $q$ 路径** 的动机之一——$\Gamma$ 邻域电响应与 LO–TO、介电常数直接相关。
 
 > **小结**：LO–TO 分裂 **绑定在 BZ 中心 $\Gamma$**；IBZ 路径负责在色散图上 **展示** 它，分裂本身由 **极性 + 长程静电** 决定，而非路径形状（GXMG 等）本身。
 
@@ -334,26 +334,26 @@ $$
 
 FCC 正格倒格为 BCC 点阵，Wigner–Seitz 胞为 **截角十二面体**（rhombic dodecahedron），高对称点仍记 $\Gamma,X,W,K,L,U$ 等（具体坐标依赖惯用胞；计算时用 seekpath 读取）。
 
-**声子示例（NaCl，rocksalt）**：DFPT 沿 $\Gamma\!\to\!X\!\to\!W\!\to\!L\!\to\!\Gamma$ 可看到 TO/LO 光学支；$\Gamma$ 点的 **LO–TO 分裂** 见 §5.5。
+**声子示例（NaCl，rocksalt）**：DFPT 沿 $\Gamma\,\to\,X\,\to\,W\,\to\,L\,\to\,\Gamma$ 可看到 TO/LO 光学支；$\Gamma$ 点的 **LO–TO 分裂** 见 §5.5。
 
 ### 6.3 六方晶系（以 hP 原胞为例）
 
 常见高对称点：
 
-| 符号 | 典型 $\mathbf{k}_{\mathrm{frac}}$ |
+| 符号 | 典型 $\mathbf{k}\_{\mathrm{frac}}$ |
 |------|-----------------------------------|
 | $\Gamma$ | $(0,0,0)$ |
 | $M$ | $(1/2,0,0)$ |
 | $K$ | $(1/3,1/3,0)$ |
 | $A$ | $(0,0,1/2)$ |
 
-标准路径例：$\Gamma\!\to\!M\!\to\!K\!\to\!\Gamma\!\to\!A\!\to\!L\!\to\!H\!\to\!A$（标签因空间群而异）。
+标准路径例：$\Gamma\,\to\,M\,\to\,K\,\to\,\Gamma\,\to\,A\,\to\,L\,\to\,H\,\to\,A$（标签因空间群而异）。
 
-**二维材料（石墨烯）**：BZ 为六边形，$K$ 与 $K'$ 为 Dirac 点，$E(\mathbf{k})$ 线性色散 $E\sim |k-K|$，有效质量 $m^{\ast}\to 0$。
+**二维材料（石墨烯）**：BZ 为六边形，$K$ 与 $K'$ 为 Dirac 点，$E(\mathbf{k})$ 线性色散 $E\sim \lvert k-K \rvert$，有效质量 $m^{\ast}\to 0$。
 
 ### 6.4 数值离散示例
 
-设路径 `GXMG`，$N_q=20$，在 $\Gamma\!\to\!X$ 段：
+设路径 `GXMG`，$N_q=20$，在 $\Gamma\,\to\,X$ 段：
 
 $$
 \mathbf{q}_\ell = \frac{\ell}{19}\,\mathbf{q}_X, \quad \ell=0,\ldots,19, \quad \mathbf{q}_X=(\tfrac{2\pi}{a},0,0)_{\mathrm{cart}}.
@@ -369,13 +369,13 @@ $$
 
 ### 7.1 Miller 集（PRDNet 原版）
 
-Miller 集 $H$（$|h|,|k|,|l|\le C_{\max}$，gcd=1，对称闭包）：
+Miller 集 $H$（$\lvert h \rvert,\lvert k \rvert,\lvert l \rvert\le C\_{\max}$，gcd=1，对称闭包）：
 
 $$
 F_{\mathbf{h}} = \sum_{i=1}^{N} f_i^{*}(\mathbf{h})\,\exp\!\big(-2\pi i\,\mathbf{h}\cdot\mathbf{r}_{\mathrm{frac},i}\big).
 $$
 
-$\mathbf{h}\cdot\mathbf{r}_{\mathrm{frac}}$ 为无量纲相位；$\mathbf{h}$ 对应倒格点 $\mathbf{G}_{\mathbf{h}}$，适合 **静态衍射** 物理。
+$\mathbf{h}\cdot\mathbf{r}\_{\mathrm{frac}}$ 为无量纲相位；$\mathbf{h}$ 对应倒格点 $\mathbf{G}\_{\mathbf{h}}$，适合 **静态衍射** 物理。
 
 ### 7.2 IBZ 路径（谱学导向改写）
 
@@ -396,14 +396,14 @@ $$
 
 ### 8.1 为何要换
 
-| 维度 | Miller 集 $H$ | IBZ 路径 $\{\mathbf{q}_\ell\}$ |
+| 维度 | Miller 集 $H$ | IBZ 路径 $\{\mathbf{q}\_\ell\}$ |
 |------|---------------|----------------------------------|
-| 物理场景 | XRD / 电子衍射，$F_{\mathbf{h}}^2$ | 声子 $\omega_\nu(\mathbf{q})$，$\varepsilon(\mathbf{q})$, IR/Raman |
+| 物理场景 | XRD / 电子衍射，$F\_{\mathbf{h}}^2$ | 声子 $\omega\_\nu(\mathbf{q})$，$\varepsilon(\mathbf{q})$, IR/Raman |
 | 变量 | 整数 $\mathbf{h}$，离散 $\mathbf{G}$ | 连续 $\mathbf{q}$，含 $\Gamma$ 邻域低 $q$ |
-| 相位 | $2\pi\mathbf{h}\cdot\mathbf{r}_{\mathrm{frac}}$ | $\mathbf{q}\cdot\mathbf{r}_{\mathrm{cart}}$ |
-| 对称 | Friedel 对、Miller 置换闭包 | IBZ + star($\mathbf{q}$) + 小群 $L_{\mathbf{q}}$ |
+| 相位 | $2\pi\mathbf{h}\cdot\mathbf{r}\_{\mathrm{frac}}$ | $\mathbf{q}\cdot\mathbf{r}\_{\mathrm{cart}}$ |
+| 对称 | Friedel 对、Miller 置换闭包 | IBZ + star($\mathbf{q}$) + 小群 $L\_{\mathbf{q}}$ |
 
-PRDNet 用 Miller 集解决 **晶体性质预测（CPP）** 中的表示碰撞；迁移到 **高精度谱学 / CACEles 多极** 时，**$\mathbf{q}$ 路径更贴近 LO–TO、光学支、低 $q$ 电响应**，而高 $|\mathbf{h}|$ Miller 点偏「短波长衍射」。
+PRDNet 用 Miller 集解决 **晶体性质预测（CPP）** 中的表示碰撞；迁移到 **高精度谱学 / CACEles 多极** 时，**$\mathbf{q}$ 路径更贴近 LO–TO、光学支、低 $q$ 电响应**，而高 $\lvert \mathbf{h} \rvert$ Miller 点偏「短波长衍射」。
 
 ### 8.2 最小改动（L1，工程上已实现思路）
 
@@ -422,7 +422,7 @@ PRDNet 用 Miller 集解决 **晶体性质预测（CPP）** 中的表示碰撞�
 1. **采样器**：`MillerIndexSampler` → `IBZQPathSampler`（环境变量如 `GXMG`，默认 $N\_q=20$）；
 2. **相位公式**：$\exp(-2\pi i\,\mathbf{h}\cdot\mathbf{r}\_{\mathrm{frac}})$ → $\exp(i\,\mathbf{q}\_\ell\cdot\mathbf{r}\_{\mathrm{cart}})$；
 3. **形式因子**：$f\_i^{\ast}(\mathbf{h})$ → $r\_{i,\ell}(h\_i^{(L)})$（每个路径点可独立 MLP 通道）；
-4. **融合接口**：$\mathbf{d}\_{\mathrm{rec}}$ 维数 $2N\_q$（Re/Im）替代 $2|H|$，**结构级 fusion 不变**。
+4. **融合接口**：$\mathbf{d}\_{\mathrm{rec}}$ 维数 $2N\_q$（Re/Im）替代 $2\lvert H \rvert$，**结构级 fusion 不变**。
 
 ### 8.3 不变与边界
 
@@ -460,8 +460,8 @@ $$
 | **IBZ** | BZ 在对称操作下的不可约楔区，数值积分只需扫 IBZ |
 | **高对称点** | BZ 边界/顶点，小群变大，简并与特殊模式（$\Gamma$ 声学支等） |
 | **高对称路径** | IBZ 内连接高对称点的折线，色散图与 PRD 探针的一维采样 |
-| **能带极值** | $\nabla_{\mathbf{k}}E_n=\mathbf{0}$；有效质量由 Hessian 给出 |
-| **LO–TO 分裂** | 极性晶体在 BZ 中心 $\Gamma$（$q\to 0$）处 LO/TO 光学支频率不等；需 NAC 与 $Z^{\ast},\varepsilon_\infty$ |
+| **能带极值** | $\nabla\_{\mathbf{k}}E\_n=\mathbf{0}$；有效质量由 Hessian 给出 |
+| **LO–TO 分裂** | 极性晶体在 BZ 中心 $\Gamma$（$q\to 0$）处 LO/TO 光学支频率不等；需 NAC 与 $Z^{\ast},\varepsilon\_\infty$ |
 | **Miller → IBZ** | PRD 全局分支从衍射整数 $\mathbf{h}$ 改为谱学 $\mathbf{q}$ 路径，fusion 架构不变 |
 
 ---
