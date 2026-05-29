@@ -28,7 +28,7 @@ tags:
 
 - 短程 MLIP 在 **Γ 点** 把 LO / TO 光学支**合并成一条**；
 - 即便加了固定电荷的库仑长程项，**LO-TO 分裂还是出不来**；
-- 传统补救是再跑一遍 **DFPT**，单独算 Born 有效电荷 $Z^{\ast}$ 和高频介电常数 $\varepsilon_\infty$，手工喂给 Phonopy 的 **NAC**。
+- 传统补救是再跑一遍 **DFPT**，单独算 Born 有效电荷 $Z^{\ast}$ 和高频介电常数 $\varepsilon\_\infty$，手工喂给 Phonopy 的 **NAC**。
 
 2026 年 3 月，Korogod 等人提出 **MTP+EDQ / MTP+EDQRd**：用**随局域环境变化的原子点电荷**描述长程静电，并给出一条关键结论——
 
@@ -68,7 +68,7 @@ NaCl 上 LO-TO 分裂与 DFT 高度一致；偶极矩涨落给出的 $\varepsilo
 
 要在 Γ 点附近正确描述这一效应，通常需要在动力学矩阵中加入 **非解析修正（Non-Analytical Correction, NAC）**。经典做法依赖：
 
-- 高频介电张量 $\hat\varepsilon_\infty$；
+- 高频介电张量 $\hat\varepsilon\_\infty$；
 - Born 有效电荷 $Z^{\ast}$。
 
 二者通常由 DFT 密度泛函微扰理论（DFPT）或实验获得，计算成本不低。Korogod 等的贡献是：**不必单独做 DFPT**，即可通过 MLIP 预测的原子电荷及其导数构造 NAC。
@@ -102,8 +102,8 @@ E_{\text{short}}(\mathbf x, \theta) = \sum_{i=1}^{N} V(n_i, \theta), \qquad
 V(n_i, \theta) = \zeta_{z_i} + \sum_\alpha \xi_\alpha B_\alpha(n_i, \hat C)
 $$
 
-- $n_i = \{\mathbf r_{ij}, z_i, z_j\}$：以原子 $i$ 为中心、截断半径 $R_{\text{cut}}$ 内的局域环境；
-- $B_\alpha$：由 moment tensor 描述符收缩得到的基函数，层级由 `lev_MTP` 控制；
+- $n\_i = \{\mathbf r\_{ij}, z\_i, z\_j\}$：以原子 $i$ 为中心、截断半径 $R\_{\text{cut}}$ 内的局域环境；
+- $B\_\alpha$：由 moment tensor 描述符收缩得到的基函数，层级由 `lev_MTP` 控制；
 - $\theta = (\zeta, \xi, \hat C)$：可训练参数。
 
 **静电能量**为点电荷库仑和，周期体系用 **Ewald 求和** [8]：
@@ -150,16 +150,16 @@ w_e \big(E(\mathbf x^{(k)}, \Omega) - E_{\text{DFT}}^{(k)}\big)^2
 \right]
 $$
 
-- $F_{i,l} = -\partial E / \partial r_{i,l}$：力，由自动微分得到；
-- $\sigma_{a,b}$：应力张量，同样对应变求导；
-- $w_e, w_f, w_s$：权重；NaCl 训练时 $w_s > 0$ 以保证晶格常数/密度正确。
+- $F\_{i,l} = -\partial E / \partial r\_{i,l}$：力，由自动微分得到；
+- $\sigma\_{a,b}$：应力张量，同样对应变求导；
+- $w\_e, w\_f, w\_s$：权重；NaCl 训练时 $w\_s > 0$ 以保证晶格常数/密度正确。
 
 优化器：**BFGS**。
 
 **两阶段 EDQRd 训练**（NaCl / PbTiO₃）：
 
 1. **阶段一**：拟合 **MTP+EDQ**（2000 步 BFGS），同时优化短程参数 $\theta$ 与电荷参数 $\mathbf p$；
-2. **阶段二**：以阶段一参数为初值，拟合 **MTP+EDQRd**（同一损失函数），引入 $s_{z_i}$ 再分配项。
+2. **阶段二**：以阶段一参数为初值，拟合 **MTP+EDQRd**（同一损失函数），引入 $s\_{z\_i}$ 再分配项。
 
 这样电荷预测网络先学到合理的局域电荷，再施加守恒约束。
 
@@ -175,9 +175,9 @@ $$
 \mathbf c = \left(\frac{\partial E_{\text{MTP}}}{\partial \theta_1}, \ldots, \frac{\partial E_{\text{MTP}}}{\partial \theta_m}\right) A^{-1}
 $$
 
-3. 若 $\gamma < \gamma_{\text{th}}$：当前势可靠，继续 MD；
-4. 若 $\gamma_{\text{th}} \le \gamma \le \Gamma_{\text{th}}$：构型进入**预选集**；
-5. 若 $\gamma > \Gamma_{\text{th}}$：**终止** MD，强制 DFT 计算该构型；
+3. 若 $\gamma < \gamma\_{\text{th}}$：当前势可靠，继续 MD；
+4. 若 $\gamma\_{\text{th}} \le \gamma \le \Gamma\_{\text{th}}$：构型进入**预选集**；
+5. 若 $\gamma > \Gamma\_{\text{th}}$：**终止** MD，强制 DFT 计算该构型；
 6. 将新 DFT 构型加入训练集，重训 MTP，更新 $A$，重启 MD。
 
 **目的**：用最少 DFT 调用覆盖 MD 轨迹上的「困难」构型，为后续 EDQRd 提供高质量训练数据。PbTiO₃ 使用文献 [7] 的 SCAN-DFT 数据集（3545 训练 + 600 验证）。
@@ -253,8 +253,8 @@ $$
 
 其中：
 
-- $Z^{\ast}_{\kappa,\alpha\beta} = \partial P_\alpha / \partial u_{\beta\kappa}$：**Born 有效电荷（BEC）**，描述原子 $\kappa$ 在 $\beta$ 方向位移时 $\alpha$ 方向极化的响应；
-- $\varepsilon_\infty$：高频介电常数（各向同性时 $\hat\varepsilon_\infty = \varepsilon_\infty \mathbf I$）；
+- $Z^{\ast}\_{\kappa,\alpha\beta} = \partial P\_\alpha / \partial u\_{\beta\kappa}$：**Born 有效电荷（BEC）**，描述原子 $\kappa$ 在 $\beta$ 方向位移时 $\alpha$ 方向极化的响应；
+- $\varepsilon\_\infty$：高频介电常数（各向同性时 $\hat\varepsilon\_\infty = \varepsilon\_\infty \mathbf I$）；
 - $\mathbf d$：原胞内 $\kappa$ 原子与第 $j$ 个晶胞中 $\kappa'$ 原子的相对位置。
 
 分子形状因子 $\delta_{\alpha'\beta'}/\lVert \mathbf d \rVert^3 - 3d_{\alpha'}d_{\beta'}/\lVert \mathbf d \rVert^5$ 是经典点偶极相互作用张量的特征形式。
@@ -276,9 +276,9 @@ P_\alpha = \sqrt{\varepsilon_\infty}\, P^0_\alpha, \qquad
 P^0_\alpha = \frac{1}{2\pi i}\sum_\beta R_{\alpha\beta} \sum_{j=1}^{N} q_j \exp(2\pi i \rho_{j,\beta})
 $$
 
-- $q_j$：MLIP（EDQRd）预测的原子电荷；
+- $q\_j$：MLIP（EDQRd）预测的原子电荷；
 - $\mathbf R$：晶胞矩阵；
-- $\rho_j$：原子 $j$ 的约化坐标。
+- $\rho\_j$：原子 $j$ 的约化坐标。
 
 **注意**：$P^0$ 只依赖电荷分布，**不含** $\varepsilon_\infty$——这是后续消去 $\varepsilon_\infty$ 的支点。
 
@@ -306,8 +306,8 @@ $$
 **物理含义**：
 
 - NAC 所需的「有效偶极耦合强度」由**电荷对位移的响应**（$Z^0$）完全决定；
-- $\varepsilon_\infty$ 只是中间变量，**不必单独输入**；
-- 对 EDQRd 势，$q_j = q_j(\mathbf x)$ 可微 → $Z^0$ 可通过自动微分从 $P^0(\mathbf x)$ 对坐标求导得到。
+- $\varepsilon\_\infty$ 只是中间变量，**不必单独输入**；
+- 对 EDQRd 势，$q\_j = q\_j(\mathbf x)$ 可微 → $Z^0$ 可通过自动微分从 $P^0(\mathbf x)$ 对坐标求导得到。
 
 ### 5.4 声子计算完整流程
 
@@ -444,7 +444,7 @@ $\mathbf r_i^{u}$ 为 **unwrapped** 坐标（跨越周期边界时不折叠）�
 
 1. **EDQ / EDQRd** 以简洁的库仑点电荷形式纳入**环境依赖**长程静电，可与任意短程 MLIP 组合；本文以 **MTP** 为例。
 2. 对分子二聚体，**MTP+EDQ** 在能量/力误差和**长程结合曲线**上均大幅优于 MTP+QRd。
-3. 对 NaCl，**MTP+EDQRd** 显著降低拟合误差，并在加入 **NAC** 后**首次仅用 MLIP 训练数据**（能量、力、应力）即可复现 LO-TO 分裂；偶极涨落给出的 $\varepsilon_0/\varepsilon_\infty$ 与实验一致。
+3. 对 NaCl，**MTP+EDQRd** 显著降低拟合误差，并在加入 **NAC** 后**首次仅用 MLIP 训练数据**（能量、力、应力）即可复现 LO-TO 分裂；偶极涨落给出的 $\varepsilon\_0/\varepsilon\_\infty$ 与实验一致。
 4. 对 PbTiO₃，同一 NAC 流程在**非严格各向同性**情况下仍能大幅改善 Γ 点声子色散，验证方法的**更广适用性**。
 5. **未来工作**：为长程模型开发专用主动学习；计算**各向异性**材料的完整介电张量。
 
@@ -456,8 +456,8 @@ $\mathbf r_i^{u}$ 为 **unwrapped** 坐标（跨越周期边界时不折叠）�
 
 1. **统一框架**：长程库仑 + 环境依赖电荷 + 声子 NAC 在同一 MLIP 里闭合，不必额外 DFPT 流水线；
 2. **可微链条**：$q(\mathbf x) \to P^0 \to Z^0 \to \Phi^{\text{dd}}$ 全程可自动微分，为后续与 Kim 式电响应、PFT 式 Hessian 监督**拼接**留接口；
-3. **谱学预测路径**：MD 偶极涨落 → $\varepsilon_0/\varepsilon_\infty$；Phonopy + NAC → LO/TO 频率 → 可与 LST 关系交叉验证；
-4. **高通量潜力**：降低对额外 DFPT（BEC、$\varepsilon_\infty$）的依赖，使**大规模 MD + 声子 + 介电**流水线更连贯，为极性晶体、铁电体（如 PbTiO₃）的高通量谱学预测提供可复现路径。
+3. **谱学预测路径**：MD 偶极涨落 → $\varepsilon\_0/\varepsilon\_\infty$；Phonopy + NAC → LO/TO 频率 → 可与 LST 关系交叉验证；
+4. **高通量潜力**：降低对额外 DFPT（BEC、$\varepsilon\_\infty$）的依赖，使**大规模 MD + 声子 + 介电**流水线更连贯，为极性晶体、铁电体（如 PbTiO₃）的高通量谱学预测提供可复现路径。
 
 和 **PFT（直接监督 Hessian）** 的对比：PFT 让短程 MLIP 的**解析力常数**更准；Korogod 等则把**长程 $1/r^3$ 部分**通过 NAC 显式补全——二者解决的是声子误差的不同来源，理论上可叠加在同一总能量 $E_{\text{long}}$ 上。
 
@@ -468,7 +468,7 @@ $\mathbf r_i^{u}$ 为 **unwrapped** 坐标（跨越周期边界时不折叠）�
 ## 10. 局限与未来
 
 - **EDQ 不守恒总电荷**，只适用于真空分子；周期体系必须用 **EDQRd**。
-- NAC 严格推导假设**各向同性** $\hat\varepsilon_\infty = \varepsilon_\infty \mathbf I$；PbTiO₃ 等单轴材料目前是**实用近似**。
+- NAC 严格推导假设**各向同性** $\hat\varepsilon\_\infty = \varepsilon\_\infty \mathbf I$；PbTiO₃ 等单轴材料目前是**实用近似**。
 - 主动学习目前基于短程 MTP，作者计划为长程模型开发专用主动学习；各向异性介电张量计算是未来方向。
 
 ---
