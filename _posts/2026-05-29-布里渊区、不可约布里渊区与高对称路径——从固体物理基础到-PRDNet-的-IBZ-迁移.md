@@ -37,19 +37,19 @@ tags:
 
 ### 1.1 正格（Direct Lattice）
 
-Bravais 格矢 $\mathbf{a}_1,\mathbf{a}_2,\mathbf{a}_3$ 张成三维周期结构。任意格点为
+Bravais 格矢 $\mathbf{a}\_1,\mathbf{a}\_2,\mathbf{a}\_3$ 张成三维周期结构。任意格点为
 
 $$
 \mathbf{R} = n_1\mathbf{a}_1 + n_2\mathbf{a}_2 + n_3\mathbf{a}_3, \quad n_i \in \mathbb{Z}.
 $$
 
-单胞内原子位置 $\boldsymbol{\tau}_\kappa$（$\kappa=1,\ldots,n_{\mathrm{basis}}$），完整晶体坐标
+单胞内原子位置 $\boldsymbol{\tau}\_\kappa$（$\kappa=1,\ldots,n\_{\mathrm{basis}}$），完整晶体坐标
 
 $$
 \mathbf{r}_{\kappa} = \boldsymbol{\tau}_\kappa + \mathbf{R}.
 $$
 
-用晶胞矩阵 $\mathbf{L}=[\mathbf{a}_1,\mathbf{a}_2,\mathbf{a}_3]$（列向量，单位 Å），分数坐标 $\mathbf{r}_{\mathrm{frac}}$ 与笛卡尔坐标关系
+用晶胞矩阵 $\mathbf{L}=[\mathbf{a}\_1,\mathbf{a}\_2,\mathbf{a}\_3]$（列向量，单位 Å），分数坐标 $\mathbf{r}\_{\mathrm{frac}}$ 与笛卡尔坐标关系
 
 $$
 \mathbf{r}_{\mathrm{cart}} = \mathbf{r}_{\mathrm{frac}}\,\mathbf{L}, \qquad
@@ -58,13 +58,13 @@ $$
 
 ### 1.2 倒格（Reciprocal Lattice）
 
-倒格基矢 $\mathbf{b}_i$ 满足
+倒格基矢 $\mathbf{b}\_i$ 满足
 
 $$
 \mathbf{a}_i \cdot \mathbf{b}_j = 2\pi\,\delta_{ij}.
 $$
 
-显式公式（$\mathbf{V}=\mathbf{a}_1\cdot(\mathbf{a}_2\times\mathbf{a}_3)$ 为原胞体积）：
+显式公式（$\mathbf{V}=\mathbf{a}\_1\cdot(\mathbf{a}\_2\times\mathbf{a}\_3)$ 为原胞体积）：
 
 $$
 \mathbf{b}_1 = 2\pi\,\frac{\mathbf{a}_2\times\mathbf{a}_3}{\mathbf{V}}, \quad
@@ -152,7 +152,7 @@ $$
 
 ### 3.2 IBZ 的定义
 
-**不可约布里渊区** $\mathrm{IBZ}\subset\mathrm{BZ}$ 是 $\mathrm{BZ}$ 的一个子楔区，使得 $\mathrm{BZ}$ 中每个 $\mathbf{k}$ 至少属于某个 $\mathrm{star}(\mathbf{k}_0)$，且 $\mathbf{k}_0\in\mathrm{IBZ}$ **唯一**代表该等价类：
+**不可约布里渊区** $\mathrm{IBZ}\subset\mathrm{BZ}$ 是 $\mathrm{BZ}$ 的一个子楔区，使得 $\mathrm{BZ}$ 中每个 $\mathbf{k}$ 至少属于某个 $\mathrm{star}(\mathbf{k}\_0)$，且 $\mathbf{k}\_0\in\mathrm{IBZ}$ **唯一**代表该等价类：
 
 $$
 \mathrm{BZ} = \bigcup_{\mathbf{k}_0\in\mathrm{IBZ}} \mathrm{star}(\mathbf{k}_0) \quad (\text{模倒格矢}).
@@ -171,7 +171,7 @@ $$
 \mathcal{Q}_{\mathrm{path}} = \{\mathbf{q}(t) : t\in[0,1]\} \subset \mathrm{IBZ}.
 $$
 
-离散为 $N_q$ 个点 $\{\mathbf{q}\_\ell\}\_{\ell=1}^{N\_q}$ 后，可用于：
+离散为 $N\_q$ 个点 $\{\mathbf{q}\_\ell\}\_{\ell=1}^{N\_q}$ 后，可用于：
 
 1. 画色散图（能带 / 声子）；
 2. 作为神经网络的全局倒易探针（PRD 的 IBZ 路径模式）。
@@ -184,7 +184,7 @@ $$
 
 ### 4.1 定义
 
-在 $\mathrm{BZ}$ 的**顶点、棱中点、面心**等处，保留 $\mathbf{k}$ 的对称操作集合 **增大**（小群 $L_{\mathbf{k}}$ 变大），本征值常出现**简并**或**特殊模式**（如 $\Gamma$ 点声学支 $\omega\to 0$）。
+在 $\mathrm{BZ}$ 的**顶点、棱中点、面心**等处，保留 $\mathbf{k}$ 的对称操作集合 **增大**（小群 $L\_{\mathbf{k}}$ 变大），本征值常出现**简并**或**特殊模式**（如 $\Gamma$ 点声学支 $\omega\to 0$）。
 
 这些点称为 **高对称点**，用标准符号标记（由空间群与 seekpath 库给出）。
 
@@ -199,7 +199,7 @@ $$
 - 在 $\Gamma$：$L\_{\Gamma}=\mathcal{G}$（完整点群）；
 - 在一般 $\mathbf{q}$：$L\_{\mathbf{q}}$ 是 $\mathcal{G}$ 的真子群。
 
-声子分支、红外/拉曼活性按 $L_{\mathbf{q}}$ 的不可约表示分类；实验强度需将偶极、极化率张量投影到相应表示）。
+声子分支、红外/拉曼活性按 $L\_{\mathbf{q}}$ 的不可约表示分类；实验强度需将偶极、极化率张量投影到相应表示）。
 
 ### 4.3 常见高对称点（立方晶系，原胞为立方）
 
@@ -224,7 +224,7 @@ $$
 \mathbf{q}(t) = (1-t)\,\mathbf{q}_A + t\,\mathbf{q}_B, \quad t\in[0,1].
 $$
 
-多段路径（如 $\Gamma\,\to\,X\,\to\,M\,\to\,\Gamma$）在每段上分别参数化，再按弧长或等分点数 $N_q$ 离散。
+多段路径（如 $\Gamma\,\to\,X\,\to\,M\,\to\,\Gamma$）在每段上分别参数化，再按弧长或等分点数 $N\_q$ 离散。
 
 **seekpath** 根据空间群自动给出标准路径标签（如 `GXMG`）及分数坐标。
 
@@ -236,7 +236,7 @@ $$
 \hat{H}_{\mathbf{k}}\,\psi_{n\mathbf{k}} = E_n(\mathbf{k})\,\psi_{n\mathbf{k}}.
 $$
 
-沿路径绘制 $E_n\big(\mathbf{q}(t)\big)$ 即 **能带图**。
+沿路径绘制 $E\_n\big(\mathbf{q}(t)\big)$ 即 **能带图**。
 
 **声子色散**（谐波近似，动力学矩阵 $D(\mathbf{q})$）：
 
@@ -244,7 +244,7 @@ $$
 D(\mathbf{q})\,\mathbf{e}_\nu(\mathbf{q}) = \omega_\nu^2(\mathbf{q})\,\mathbf{e}_\nu(\mathbf{q}).
 $$
 
-$\omega_\nu(\mathbf{q})$ 为第 $\nu$ 支声子频率；沿路径绘图即 **声子色散关系**。
+$\omega\_\nu(\mathbf{q})$ 为第 $\nu$ 支声子频率；沿路径绘图即 **声子色散关系**。
 
 ### 5.3 能带极值与有效质量
 
@@ -269,7 +269,7 @@ $$
 - **价带顶 / 导带底** 常在 $\Gamma$ 或高对称点（直接/间接带隙）；
 - 也可能在 **高对称路径内部**（非高对称点的极值）——此时需沿路径扫描 + 数值求导定位。
 
-**声子极值**：同理，$\omega_\nu(\mathbf{q})$ 在 $\mathbf{q}^{\ast}$ 处 $\nabla_{\mathbf{q}}\omega_\nu=\mathbf{0}$；$\Gamma$ 点声学支 $\omega\to 0$ 是 **全局** 极小（Goldstone 模），光学支极值常出现在 $X,M,R$ 等边界点。
+**声子极值**：同理，$\omega\_\nu(\mathbf{q})$ 在 $\mathbf{q}^{\ast}$ 处 $\nabla\_{\mathbf{q}}\omega\_\nu=\mathbf{0}$；$\Gamma$ 点声学支 $\omega\to 0$ 是 **全局** 极小（Goldstone 模），光学支极值常出现在 $X,M,R$ 等边界点。
 
 ### 5.4 群速度
 
@@ -288,8 +288,8 @@ $$
 | 横光学 | $\perp\,\mathbf{q}$ | **TO**（Transverse Optical） |
 | 纵光学 | $\parallel\,\mathbf{q}$ | **LO**（Longitudinal Optical） |
 
-在 **非极性** 晶体中，$\Gamma$ 点（$\mathbf{q}=\mathbf{0}$）上 LO 与 TO 光学支通常 **简并**：$\omega_{\mathrm{LO}}(\Gamma)=\omega_{\mathrm{TO}}(\Gamma)$。  
-在 **极性/离子晶体**（如 NaCl、PbTiO$_3$）中，即便在 $\Gamma$ 点二者也 **不再简并**：
+在 **非极性** 晶体中，$\Gamma$ 点（$\mathbf{q}=\mathbf{0}$）上 LO 与 TO 光学支通常 **简并**：$\omega\_{\mathrm{LO}}(\Gamma)=\omega\_{\mathrm{TO}}(\Gamma)$。  
+在 **极性/离子晶体**（如 NaCl、PbTiO$\_3$）中，即便在 $\Gamma$ 点二者也 **不再简并**：
 
 $$
 \omega_{\mathrm{LO}}(\Gamma) \neq \omega_{\mathrm{TO}}(\Gamma),
@@ -318,9 +318,9 @@ $$
 
 ### 6.1 简单立方（SC）→ 立方 BZ
 
-正格：$\mathbf{a}_1=a\hat{x}$, $\mathbf{a}_2=a\hat{y}$, $\mathbf{a}_3=a\hat{z}$。
+正格：$\mathbf{a}\_1=a\hat{x}$, $\mathbf{a}\_2=a\hat{y}$, $\mathbf{a}\_3=a\hat{z}$。
 
-倒格：$\mathbf{b}_i = \frac{2\pi}{a}\hat{e}_i$。最近邻倒格点 $(\pm1,0,0)$ 等，$\mathrm{BZ}$ 为边长 $\frac{2\pi}{a}$ 的 **立方体**，$\Gamma$ 在中心，$X$ 在面心。
+倒格：$\mathbf{b}\_i = \frac{2\pi}{a}\hat{e}\_i$。最近邻倒格点 $(\pm1,0,0)$ 等，$\mathrm{BZ}$ 为边长 $\frac{2\pi}{a}$ 的 **立方体**，$\Gamma$ 在中心，$X$ 在面心。
 
 **标准路径** `GXR` 或 `GXMGR`（取决于原胞/惯用胞选择）；对 SC 单原子胞，常见：
 
@@ -328,7 +328,7 @@ $$
 \Gamma(0,0,0) \to X(1/2,0,0) \to M(1/2,1/2,0) \to \Gamma.
 $$
 
-**物理示例**：若某能带在 $\Gamma$ 为带顶、在 $X$ 为带底，则为 **间接带隙** $\Delta E = E_X - E_\Gamma$。
+**物理示例**：若某能带在 $\Gamma$ 为带顶、在 $X$ 为带底，则为 **间接带隙** $\Delta E = E\_X - E\_\Gamma$。
 
 ### 6.2 面心立方（FCC）→ 倒易为 BCC
 
@@ -353,13 +353,13 @@ FCC 正格倒格为 BCC 点阵，Wigner–Seitz 胞为 **截角十二面体**（
 
 ### 6.4 数值离散示例
 
-设路径 `GXMG`，$N_q=20$，在 $\Gamma\,\to\,X$ 段：
+设路径 `GXMG`，$N\_q=20$，在 $\Gamma\,\to\,X$ 段：
 
 $$
 \mathbf{q}_\ell = \frac{\ell}{19}\,\mathbf{q}_X, \quad \ell=0,\ldots,19, \quad \mathbf{q}_X=(\tfrac{2\pi}{a},0,0)_{\mathrm{cart}}.
 $$
 
-对每点计算 $\omega_\nu(\mathbf{q}_\ell)$，横轴用累积弧长 $s_\ell$ 绘图——即 phonopy / VASP 输出的色散图格式。
+对每点计算 $\omega\_\nu(\mathbf{q}\_\ell)$，横轴用累积弧长 $s\_\ell$ 绘图——即 phonopy / VASP 输出的色散图格式。
 
 ---
 
@@ -379,13 +379,13 @@ $\mathbf{h}\cdot\mathbf{r}\_{\mathrm{frac}}$ 为无量纲相位；$\mathbf{h}$ �
 
 ### 7.2 IBZ 路径（谱学导向改写）
 
-路径点 $\mathbf{q}_\ell\in\mathcal{Q}_{\mathrm{path}}$，可学习标量/向量响应 $r_{i,\ell}$：
+路径点 $\mathbf{q}\_\ell\in\mathcal{Q}\_{\mathrm{path}}$，可学习标量/向量响应 $r\_{i,\ell}$：
 
 $$
 \mathcal{R}(\mathbf{q}_\ell) = \sum_{i\in\mathrm{cell}} r_{i,\ell}\,\exp\!\big(i\,\mathbf{q}_\ell\cdot\mathbf{r}_{\mathrm{cart},i}\big).
 $$
 
-取实部/虚部拼接 → MLP → 全局条件向量 $\mathbf{z}$，再与图网络池化特征融合，调制局域 Head（如 CACEles 的 $q_i,\mathbf{u}_i,\alpha_i$）。
+取实部/虚部拼接 → MLP → 全局条件向量 $\mathbf{z}$，再与图网络池化特征融合，调制局域 Head（如 CACEles 的 $q\_i,\mathbf{u}\_i,\alpha\_i$）。
 
 **关键**：$\mathcal{R}(\mathbf{q})$ 是 **embedding 探针**，不是 $D(\mathbf{q})$ 的本征值，也不是物理 $Z^{\ast}(\mathbf{q})$ 本身——但 **采样几何** 与声子/介电色散一致。
 
