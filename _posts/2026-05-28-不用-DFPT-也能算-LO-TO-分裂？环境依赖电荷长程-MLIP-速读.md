@@ -28,7 +28,7 @@ tags:
 
 - 短程 MLIP 在 **Γ 点** 把 LO / TO 光学支**合并成一条**；
 - 即便加了固定电荷的库仑长程项，**LO-TO 分裂还是出不来**；
-- 传统补救是再跑一遍 **DFPT**，单独算 Born 有效电荷 $Z^{*}$ 和高频介电常数 $\varepsilon_\infty$，手工喂给 Phonopy 的 **NAC**。
+- 传统补救是再跑一遍 **DFPT**，单独算 Born 有效电荷 $Z^{\ast}$ 和高频介电常数 $\varepsilon_\infty$，手工喂给 Phonopy 的 **NAC**。
 
 2026 年 3 月，Korogod 等人提出 **MTP+EDQ / MTP+EDQRd**：用**随局域环境变化的原子点电荷**描述长程静电，并给出一条关键结论——
 
@@ -69,7 +69,7 @@ NaCl 上 LO-TO 分裂与 DFT 高度一致；偶极矩涨落给出的 $\varepsilo
 要在 Γ 点附近正确描述这一效应，通常需要在动力学矩阵中加入 **非解析修正（Non-Analytical Correction, NAC）**。经典做法依赖：
 
 - 高频介电张量 $\hat\varepsilon_\infty$；
-- Born 有效电荷 $Z^{*}$。
+- Born 有效电荷 $Z^{\ast}$。
 
 二者通常由 DFT 密度泛函微扰理论（DFPT）或实验获得，计算成本不低。Korogod 等的贡献是：**不必单独做 DFPT**，即可通过 MLIP 预测的原子电荷及其导数构造 NAC。
 
@@ -184,7 +184,7 @@ $$
 
 ### 3.5 核心方法：仅用 MLIP 构造 NAC
 
-对**各向同性**材料（如 NaCl），当 $\hat\varepsilon_\infty = \varepsilon_\infty \mathbf I$ 时，标准 NAC 项中的 $Z^{*}$ 与 $\varepsilon_\infty$ 可以合并。作者利用 Zhong 等 [11] 的极化定义，引入**与 $\varepsilon_\infty$ 无关的标度 Born 电荷** $Z^0$，使得 NAC 最终可写为（式 17，详见 §05）——右侧**完全由 MLIP 预测的原子电荷及其对坐标的导数**确定，无需额外 DFPT 步骤。
+对**各向同性**材料（如 NaCl），当 $\hat\varepsilon_\infty = \varepsilon_\infty \mathbf I$ 时，标准 NAC 项中的 $Z^{\ast}$ 与 $\varepsilon_\infty$ 可以合并。作者利用 Zhong 等 [11] 的极化定义，引入**与 $\varepsilon_\infty$ 无关的标度 Born 电荷** $Z^0$，使得 NAC 最终可写为（式 17，详见 §05）——右侧**完全由 MLIP 预测的原子电荷及其对坐标的导数**确定，无需额外 DFPT 步骤。
 
 ---
 
@@ -253,7 +253,7 @@ $$
 
 其中：
 
-- $Z^{*}_{\kappa,\alpha\beta} = \partial P_\alpha / \partial u_{\beta\kappa}$：**Born 有效电荷（BEC）**，描述原子 $\kappa$ 在 $\beta$ 方向位移时 $\alpha$ 方向极化的响应；
+- $Z^{\ast}_{\kappa,\alpha\beta} = \partial P_\alpha / \partial u_{\beta\kappa}$：**Born 有效电荷（BEC）**，描述原子 $\kappa$ 在 $\beta$ 方向位移时 $\alpha$ 方向极化的响应；
 - $\varepsilon_\infty$：高频介电常数（各向同性时 $\hat\varepsilon_\infty = \varepsilon_\infty \mathbf I$）；
 - $\mathbf d$：原胞内 $\kappa$ 原子与第 $j$ 个晶胞中 $\kappa'$ 原子的相对位置。
 
@@ -265,7 +265,7 @@ $$
 2. 在 $\Gamma$ 点叠加 $\Phi^{\text{dd}}$（NAC）；
 3. 对角化得到含 LO-TO 分裂的声子色散。
 
-**传统瓶颈**：步骤 2 需要单独做 DFPT 或实验得到 $Z^{*}$ 和 $\varepsilon_\infty$。Korogod 等的贡献是证明——对 EDQRd 这类长程 MLIP，$Z^{*}$ 与 $\varepsilon_\infty$ 的组合可以从**同一套可微电荷模型**中一次性提取。
+**传统瓶颈**：步骤 2 需要单独做 DFPT 或实验得到 $Z^{\ast}$ 和 $\varepsilon_\infty$。Korogod 等的贡献是证明——对 EDQRd 这类长程 MLIP，$Z^{\ast}$ 与 $\varepsilon_\infty$ 的组合可以从**同一套可微电荷模型**中一次性提取。
 
 ### 5.2 引入与 $\varepsilon_\infty$ 无关的标度 Born 电荷 $Z^0$
 
@@ -293,7 +293,7 @@ $Z^0$ 是**标度 Born 电荷（scaled BEC）**，完全由 MLIP 电荷 $q_j(\ma
 
 ### 5.3 $\varepsilon_\infty$ 精确相消 → 最终 NAC（原文式 17）
 
-将 $Z^{*} = \sqrt{\varepsilon_\infty}\, Z^0$ 代入标准 NAC，$\varepsilon_\infty$ 在分子、分母中**精确相消**：
+将 $Z^{\ast} = \sqrt{\varepsilon_\infty}\, Z^0$ 代入标准 NAC，$\varepsilon_\infty$ 在分子、分母中**精确相消**：
 
 $$
 \boxed{
