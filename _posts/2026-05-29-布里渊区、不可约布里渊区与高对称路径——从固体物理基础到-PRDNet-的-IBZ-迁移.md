@@ -16,7 +16,7 @@ tags:
     - 倒易空间
 ---
 
-![一图总结](/img/posts/ibz-prdnet-bz-path/ibz-path-prdnet-cover.png)
+![一图总结](/img/posts/2026-05-29-ibz-prdnet-bz-path/ibz-path-prdnet-cover.png)
 
 ## 0. 导读：为什么要学 IBZ 路径
 

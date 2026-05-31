@@ -64,11 +64,11 @@ $$
 
 ### 1) MAPbI3：CACE-SOG 相对 CACE-LES
 
-![MAPbI3体系对比结果](/img/posts/cacesog-water-mapbi3/MAPbI3体系.png)
+![MAPbI3体系对比结果](/img/posts/2026-05-17-cacesog-water-mapbi3/MAPbI3体系.png)
 
 ### 2) water：CACE-SOG 相对 CACE-LES
 
-![水体系对比结果](/img/posts/cacesog-water-mapbi3/水体系.png)
+![水体系对比结果](/img/posts/2026-05-17-cacesog-water-mapbi3/水体系.png)
 
 ---
 

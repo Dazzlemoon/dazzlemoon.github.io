@@ -14,7 +14,7 @@ tags:
     - 势函数
 ---
 
-![一图总结：DPA4 短程 × SOG 长程](/img/posts/dpa4-sog-longrange/dpa4-sog-longrange-onepage.png)
+![一图总结：DPA4 短程 × SOG 长程](/img/posts/2026-05-23-dpa4-sog-longrange/dpa4-sog-longrange-onepage.png)
 
 > 背景串联：Kim et al. 2026 半局域可极化多极框架（[arXiv:2605.05746](https://arxiv.org/abs/2605.05746)）· DeepMD **DPA4/SeZM**（[dpa4 文档](https://github.com/deepmodeling/deepmd-kit)）· **MACE-POLAR-1**（arXiv:2602.19411）· 本组 **CACE-SOG** 长程核 · **SOG 开源实现**（[GitHub: Dazzlemoon/sog](https://github.com/Dazzlemoon/sog)）
 

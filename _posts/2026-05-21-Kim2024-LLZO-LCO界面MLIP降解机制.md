@@ -17,7 +17,7 @@ tags:
 > DOI：[10.1016/j.ensm.2024.103842](https://doi.org/10.1016/j.ensm.2024.103842)  
 > 体系：**石榴石 LLZO × 钴酸锂 LCO**（不是三元 NCM，但对氧化物全固态界面很有参考价值）
 
-![一图总结：Li 贫互混 → Co 体相扩散 → 晶界团簇](/img/posts/kim2024-llzo/kim2024-llzo-lco-summary-cover.png)
+![一图总结：Li 贫互混 → Co 体相扩散 → 晶界团簇](/img/posts/2026-05-21-kim2024-llzo/kim2024-llzo-lco-summary-cover.png)
 
 做全固态电池的人，多半都听过一句话：瓶颈在**固–固界面**。可界面埋在颗粒接触缝里，实验很难拍到「刚变坏那几秒」；第一性原理分子动力学（AIMD）又往往只能算几百原子、几十皮秒——**看不清、算不长**。
 
@@ -29,7 +29,7 @@ Kim 等人换了一条路：先训一支能描述**无序、互混、高温反�
 
 很多人一听 ML 势就怕「不准」。这篇工作在动手算界面之前，先把势函数和 **AIMD（高精度基准）** 逐项对照。
 
-![Fig.1：MLIP 与 AIMD 对照](/img/posts/kim2024-llzo/fig01-mlip-validation-aimd-vs-mlmd.png)
+![Fig.1：MLIP 与 AIMD 对照](/img/posts/2026-05-21-kim2024-llzo/fig01-mlip-validation-aimd-vs-mlmd.png)
 
 **上图在说什么？**
 
@@ -45,7 +45,7 @@ Kim 等人换了一条路：先训一支能描述**无序、互混、高温反�
 
 共烧结时，界面常会**缺锂**或**锂过剩**——化学势不一样，降解剧本也完全不同。论文用 **LLZO(001) | LCO(104)** 大胞（>1.7 万原子），在 **1500 K、10 ns** 里同时看两侧界面。
 
-![Fig.2：Li 富（左）与 Li 贫（右）界面演化](/img/posts/kim2024-llzo/fig02-llzo-lco-interface-li-profile.png)
+![Fig.2：Li 富（左）与 Li 贫（右）界面演化](/img/posts/2026-05-21-kim2024-llzo/fig02-llzo-lco-interface-li-profile.png)
 
 **上图在说什么？**
 
@@ -60,7 +60,7 @@ Kim 等人换了一条路：先训一支能描述**无序、互混、高温反�
 
 Li 贫界面会把 **Co 推离 LCO**，Co 进入立方 LLZO。那 Co 是占死 Li 的位子、把离子通道堵死吗？论文专门算了 **Co 和 Li 在体相 LLZO 里怎么跳**。
 
-![Fig.4：Co 与 Li 在立方 LLZO 中的扩散通道](/img/posts/kim2024-llzo/fig04-co-li-diffusion-llzo.png)
+![Fig.4：Co 与 Li 在立方 LLZO 中的扩散通道](/img/posts/2026-05-21-kim2024-llzo/fig04-co-li-diffusion-llzo.png)
 
 **Fig.4 在说什么？**
 
@@ -70,7 +70,7 @@ Li 贫界面会把 **Co 推离 LCO**，Co 进入立方 LLZO。那 Co 是占死 L
 
 所以：**Co 会扰动局域 Li 通道，但体相 Li⁺ 电导只是小幅变差**——和实验「掺 Co 后电导略降」对得上。若共烧结后电导率**断崖式下跌**，作者更怀疑 **二次相、严重无序、立方→四方相变**，而不是 Co 单独堵孔。
 
-![Fig.5：Co 占 Zr 位 / La 位时的畸变与 Li 扩散](/img/posts/kim2024-llzo/fig05-co-doping-zr-la-sites.png)
+![Fig.5：Co 占 Zr 位 / La 位时的畸变与 Li 扩散](/img/posts/2026-05-21-kim2024-llzo/fig05-co-doping-zr-la-sites.png)
 
 **Fig.5 补充了什么？**
 
@@ -87,7 +87,7 @@ Li 贫界面会把 **Co 推离 LCO**，Co 进入立方 LLZO。那 Co 是占死 L
 
 体相里 Co 扩散尚可理解；**多晶 LLZO 的晶界** 才是「埋雷」所在——Kim 用六个不同取向的倾斜晶界 + 非晶 LLZO 模型论证：**Co 爱往晶界跑，还会成团。**
 
-![Fig.6：Co 在晶界偏析、捕获与团簇](/img/posts/kim2024-llzo/fig06-co-gb-segregation-clustering.png)
+![Fig.6：Co 在晶界偏析、捕获与团簇](/img/posts/2026-05-21-kim2024-llzo/fig06-co-gb-segregation-clustering.png)
 
 **上图在说什么？**
 
@@ -104,7 +104,7 @@ Li 贫界面会把 **Co 推离 LCO**，Co 进入立方 LLZO。那 Co 是占死 L
 
 不是所有晶面剧本相同。**LCO(003)** 在 Li 贫时外层 **CoO₂ 较完整**，Co 不易外迁；但若打出 **Co 空位**，Li 仍可能钻进去。
 
-![Fig.3：LCO(003) 界面 Li 跃迁与势垒](/img/posts/kim2024-llzo/fig03-lco003-neb-li-migration.png)
+![Fig.3：LCO(003) 界面 Li 跃迁与势垒](/img/posts/2026-05-21-kim2024-llzo/fig03-lco003-neb-li-migration.png)
 
 **上图在说什么？**
 

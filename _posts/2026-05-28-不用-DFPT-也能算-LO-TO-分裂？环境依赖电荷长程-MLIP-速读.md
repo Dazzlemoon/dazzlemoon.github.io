@@ -18,7 +18,7 @@ tags:
     - Korogod
     - 高精度谱学
 ---
-![一图总结](/img/posts/korogod-2026-loto-mlip/cover.png)
+![一图总结](/img/posts/2026-05-28-korogod-2026-loto-mlip/cover.png)
 
 > 基于原文：Korogod, Shapeev & Novikov (2026)  
 > *Long-range machine-learning potentials with environment-dependent charges enable predicting LO-TO splitting and dielectric constants*  
@@ -345,7 +345,7 @@ $$
 
 分裂不是「能量/力 RMSE 小」就能自动出现——必须在 Γ 点**显式注入** $\Phi^{\text{dd}}$。
 
-![Figure 2：NaCl 声子谱——MTP、MTP+EDQRd、MTP+EDQRd+NAC 与 DFT 对比](/img/posts/korogod-2026-loto-mlip/fig2-nacl-phonon-spectra.png)
+![Figure 2：NaCl 声子谱——MTP、MTP+EDQRd、MTP+EDQRd+NAC 与 DFT 对比](/img/posts/2026-05-28-korogod-2026-loto-mlip/fig2-nacl-phonon-spectra.png)
 
 *图 2 | NaCl 声子色散（ensemble 平均，阴影为 1σ）。**(a)** 纯 MTP：Γ 点**无 LO-TO 分裂**，U–W–K 路径部分支合并，TO 频率偏高。**(b)** MTP+EDQRd：Γ 点 TO 频率正确，但仍缺分裂；X、L 点改善。**(c)** MTP+EDQRd+NAC：全路径与 DFT 极好一致，LO-TO 分裂略低估——**只有加 NAC 才闭合 Γ 点**。**(d)** 三种 MLIP 叠加对比：仅 MTP+EDQRd+NAC 在 Γ 点给出最高光学支（LO）。DFT 参考的 NAC 用文献实验 BEC 与 $\varepsilon_\infty$；MLIP 的 NAC **完全由 EDQRd 电荷导出**。*
 
@@ -374,7 +374,7 @@ $$
 
 $\mathbf r_i^{u}$ 为 **unwrapped** 坐标（跨越周期边界时不折叠）。NaCl 5832 原子、290 K、2 ns NVT-MD 得到 **$2.71 \pm 0.07$**，与 LST 关系及实验 **2.53** 一致——说明 EDQRd 电荷不仅用于 NAC，也能正确描述**宏观极化涨落**。
 
-![Figure 3：NaCl 的 ε₀/ε∞ 随 MD 时间收敛](/img/posts/korogod-2026-loto-mlip/fig3-nacl-dielectric-ratio.png)
+![Figure 3：NaCl 的 ε₀/ε∞ 随 MD 时间收敛](/img/posts/2026-05-28-korogod-2026-loto-mlip/fig3-nacl-dielectric-ratio.png)
 
 *图 3 | MTP+EDQRd 偶极矩涨落给出的 $\varepsilon_0/\varepsilon_\infty$ 随模拟时间变化（阴影 1σ；黑线实验值 2.53 [19]）。约 **0.5 ns** 后均值与标准差收敛；最终 **2.71 ± 0.07** 仅比实验高约 7%，与 §04 的 LST 关系及 §05 的 NAC 声子结果**自洽**。*
 
@@ -394,7 +394,7 @@ $\mathbf r_i^{u}$ 为 **unwrapped** 坐标（跨越周期边界时不折叠）�
 
 体系：真空中的 $\text{CH}_3\text{COO}^- +$ 4-甲基苯酚、$\text{CH}_3\text{COO}^- +$ 4-甲基咪唑。短程 MTP 8 级，EDQ 电荷模型 2 级 MTP，各训练 5 个 ensemble 成员。
 
-![Table I：两个有机二聚体体系的能量与力拟合 RMSE](/img/posts/korogod-2026-loto-mlip/table-i-fitting-errors-dimers.png)
+![Table I：两个有机二聚体体系的能量与力拟合 RMSE](/img/posts/2026-05-28-korogod-2026-loto-mlip/table-i-fitting-errors-dimers.png)
 
 *表 I | **MTP+EDQ** 能量 RMSE 比 MTP / MTP+QRd **降低 3–9 倍**，力 RMSE 约降 30%。固定电荷 QRd 几乎不能改善能量误差。*
 
@@ -407,7 +407,7 @@ $\mathbf r_i^{u}$ 为 **unwrapped** 坐标（跨越周期边界时不折叠）�
 | | MTP+QRd | 0.719 ± 0.017 | 15.9 ± 0.4 |
 | | **MTP+EDQ** | **0.078 ± 0.005** | **10.9 ± 0.2** |
 
-![Figure 1：DFT 与 MTP / MTP+QRd / MTP+EDQ 的结合曲线对比](/img/posts/korogod-2026-loto-mlip/fig1-binding-curves-dimers.png)
+![Figure 1：DFT 与 MTP / MTP+QRd / MTP+EDQ 的结合曲线对比](/img/posts/2026-05-28-korogod-2026-loto-mlip/fig1-binding-curves-dimers.png)
 
 *图 1 | 分子间距离–结合能曲线（ensemble 平均）。(a) 4-甲基苯酚、(b) 4-甲基咪唑。**MTP** 与 **MTP+QRd**（紫、蓝虚线）在 6–12 Å 出现非物理振荡，长程平台偏离 DFT（黑实线）。**MTP+EDQ**（红虚线）在大、小分离距均与 DFT 重合，尤其正确再现咪唑体系的**单调上升**长程行为——**电荷必须随局域环境变化**。*
 
@@ -417,7 +417,7 @@ $\mathbf r_i^{u}$ 为 **unwrapped** 坐标（跨越周期边界时不折叠）�
 
 304 构型（216 原子 NPT-MD + MTP 主动学习）；CP2K GTH-PBE 参考。代表模型：**MTP-12** vs **MTP-12+EDQRd(MTP-6)**。
 
-![Table II：NaCl 的能量、力、应力拟合 RMSE](/img/posts/korogod-2026-loto-mlip/table-ii-fitting-errors-nacl.png)
+![Table II：NaCl 的能量、力、应力拟合 RMSE](/img/posts/2026-05-28-korogod-2026-loto-mlip/table-ii-fitting-errors-nacl.png)
 
 *表 II | EDQRd 使能量/应力 RMSE 约降 **3 倍**，力 RMSE 约降 **5 倍**；单纯提高 MTP 层级（12→16）收益有限。两种 EDQRd 变体均显著优于纯 MTP。*
 
@@ -434,7 +434,7 @@ $\mathbf r_i^{u}$ 为 **unwrapped** 坐标（跨越周期边界时不折叠）�
 
 四方相 PbTiO₃ 的 ordinary / extraordinary $\varepsilon_\infty$ 相差 ~10%，式 (17) **严格推导仅对各向同性成立**。作者仍用同一 NAC 流程试探：MTP-20 + EDQRd(MTP-16)，SCAN 训练集 [7]；验证误差 0.6 meV/atom（能量）、91.8 meV/Å（力），接近 CACE+LES [11] 的 0.4 / 79.8 meV/Å。
 
-![Figure 4：PbTiO₃ 声子谱——MTP+EDQRd 与 MTP+EDQRd+NAC 对比 DFT](/img/posts/korogod-2026-loto-mlip/fig4-pbtio3-phonon-spectrum.png)
+![Figure 4：PbTiO₃ 声子谱——MTP+EDQRd 与 MTP+EDQRd+NAC 对比 DFT](/img/posts/2026-05-28-korogod-2026-loto-mlip/fig4-pbtio3-phonon-spectrum.png)
 
 *图 4 | 四方 PbTiO₃ 声子色散（DFT 参考为 PBEsol）。(a) **MTP+EDQRd**：远离 Γ 点总体合理，Γ 点**无法给出 LO-TO 分裂**（类比 NaCl 图 2b）。(b) **MTP+EDQRd+NAC**：Γ 点附近**急剧改善**，分裂趋势与 DFT 一致——即便材料**非严格各向同性**，EDQRd 电荷构造的 NAC 仍是实用近似。*
 

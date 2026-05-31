@@ -15,7 +15,7 @@ tags:
     - PFT
 ---
 
-![一图总结](/img/posts/grandel2026-lora-equitrain/cover.png)
+![一图总结](/img/posts/2026-05-24-grandel2026-lora-equitrain/cover.png)
 
 > 基于原文：Grandel et al., *Parameter-Efficient Fine-Tuning of Machine-Learning Interatomic Potentials for Phonon and Thermal Property Prediction* (arXiv:2604.01017, 2026)
 
@@ -35,7 +35,7 @@ Grandel 等人 2026 年的工作（arXiv:2604.01017）给了一条很实用的�
 
 ## 一、他们到底在比什么？
 
-![精调策略总览：Transfer / Multihead / Equitrain（LoRA）](/img/posts/grandel2026-lora-equitrain/fig01-workflow-finetuning-strategies.png)
+![精调策略总览：Transfer / Multihead / Equitrain（LoRA）](/img/posts/2026-05-24-grandel2026-lora-equitrain/fig01-workflow-finetuning-strategies.png)
 
 在 **53 种**相变/硫族化物材料上，对 **MACE-MP-0b3** 逐材料精调，对比四条路线：
 
@@ -114,7 +114,7 @@ $$
 
 ### 3.1 数据效率：10 帧就够用
 
-![训练数据量 vs 力 MAE：Equitrain 最低](/img/posts/grandel2026-lora-equitrain/fig02-dataset-force-mae-data-efficiency.png)
+![训练数据量 vs 力 MAE：Equitrain 最低](/img/posts/2026-05-24-grandel2026-lora-equitrain/fig02-dataset-force-mae-data-efficiency.png)
 
 - 训练构型从 2 增到 16，力 MAE 快速收敛；
 - **~10 帧**已明显优于基座 MP-0b3；
@@ -122,7 +122,7 @@ $$
 
 ### 3.2 声子：0.27 → 0.05 THz
 
-![声子 MAE 对比（不同训练胞尺寸）](/img/posts/grandel2026-lora-equitrain/table01-phonon-mae-structure-size.png)
+![声子 MAE 对比（不同训练胞尺寸）](/img/posts/2026-05-24-grandel2026-lora-equitrain/table01-phonon-mae-structure-size.png)
 
 大超胞（10–15 Å）训练时，全布里渊区声子 MAE：
 
@@ -136,7 +136,7 @@ $$
 
 ### 3.3 热导、弹性：多数材料 ±5% 以内
 
-![热力学与弹性性质相对 DFT 偏差（300 K）](/img/posts/grandel2026-lora-equitrain/fig03-thermal-elastic-deviation.png)
+![热力学与弹性性质相对 DFT 偏差（300 K）](/img/posts/2026-05-24-grandel2026-lora-equitrain/fig03-thermal-elastic-deviation.png)
 
 300 K 下看热容、熵、自由能、Slack 热导率、Bulk/Shear 模量：
 
@@ -146,14 +146,14 @@ $$
 
 ### 3.4 虚频与相变：Equitrain 最稳
 
-![虚频稳定性混淆矩阵](/img/posts/grandel2026-lora-equitrain/table03-imaginary-mode-confusion-matrix.png)
+![虚频稳定性混淆矩阵](/img/posts/2026-05-24-grandel2026-lora-equitrain/table03-imaginary-mode-confusion-matrix.png)
 
 - Equitrain：**100% precision**（不误报不稳定），**89% recall**；
 - 比“有没有虚频”更狠的测试是**沿虚频方向扫 PES、看 relax 到哪个相**。
 
 **K₃Sb 案例**（Figure 4）：
 
-![K₃Sb：Equitrain 抓到 K 点虚频并复现正确相变](/img/posts/grandel2026-lora-equitrain/fig04-k3sb-phonon-pes-phase-transition.png)
+![K₃Sb：Equitrain 抓到 K 点虚频并复现正确相变](/img/posts/2026-05-24-grandel2026-lora-equitrain/fig04-k3sb-phonon-pes-phase-transition.png)
 
 - Transfer / 基座：**看不到** K 点虚频；
 - Equitrain：双阱 PES 形状对，relax 到正确 **P6₃cm** 相（Multihead 会 relax 到错相）。
@@ -164,7 +164,7 @@ $$
 
 ## 四、算力账：DFT 时间也能省
 
-![phonon DFT vs 精调数据生成 CPU 时间](/img/posts/grandel2026-lora-equitrain/fig06-computational-cost.png)
+![phonon DFT vs 精调数据生成 CPU 时间](/img/posts/2026-05-24-grandel2026-lora-equitrain/fig06-computational-cost.png)
 
 - 传统 phonon：单材料平均 **27.3 h** DFT（大位移超胞）；
 - 10 帧精调数据：**18.8 h** → 总体省 **~32%**；
