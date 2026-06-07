@@ -366,7 +366,7 @@ $$
 
 **介电性质可迁移**：LO-TO 分裂尤其**高能支**被正确捕获；结构远离参考位形时精度下降。
 
-**延伸阅读（三路线对比）**：与 Korogod (2026) MTP+EDQRd+NAC、Kim (2026) 可极化多极矩 MLIP 的公式对照、$\varepsilon\_e$ 构型依赖与谱学选型，见站内延伸阅读专文（Monacelli / Korogod / Kim 三路线对比，待同步博客）。
+**延伸阅读（三路线对比）**：与 Korogod (2026) MTP+EDQRd+NAC、Kim (2026) 可极化多极矩 MLIP 的公式对照、$\varepsilon\_e$ 构型依赖与谱学选型，见 [极性材料长程静电三路线对比：Monacelli 插件式 LO-TO、Korogod 可学电荷 NAC 与 Kim 可极化多极矩光谱](/2026/06/07/极性材料长程静电三路线对比-Monacelli-插件式-LO-TO、Korogod-可学电荷-NAC-与-Kim-可极化/)。
 
 ---
 
@@ -565,6 +565,7 @@ Monacelli & Marzari 给出**第一性原理严格**的长程静电修正：**只
 
 ## 延伸阅读（站内）
 
+- [极性材料长程静电三路线对比：Monacelli 插件式 LO-TO、Korogod 可学电荷 NAC 与 Kim 可极化多极矩光谱](/2026/06/07/极性材料长程静电三路线对比-Monacelli-插件式-LO-TO、Korogod-可学电荷-NAC-与-Kim-可极化/)
 - [不用 DFPT 也能算 LO-TO 分裂？环境依赖电荷长程 MLIP 速读](/2026/05/28/不用-DFPT-也能算-LO-TO-分裂环境依赖电荷长程-MLIP-速读/)
 - [一篇讲透：为什么“可极化多极矩”能让材料力场更懂电学？](/2026/05/16/Kim2026-可极化多极矩长程电静学/)
 
