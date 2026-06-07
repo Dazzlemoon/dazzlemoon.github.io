@@ -366,7 +366,7 @@ $$
 
 **介电性质可迁移**：LO-TO 分裂尤其**高能支**被正确捕获；结构远离参考位形时精度下降。
 
-**延伸阅读（三路线对比）**：与 Korogod (2026) MTP+EDQRd+NAC、Kim (2026) 可极化多极矩 MLIP 的公式对照、$\varepsilon\_e$ 构型依赖与谱学选型，见 [极性材料长程静电三路线对比：Monacelli 插件式 LO-TO、Korogod 可学电荷 NAC 与 Kim 可极化多极矩光谱](/2026/06/07/极性材料长程静电三路线对比-Monacelli-插件式-LO-TO、Korogod-可学电荷-NAC-与-Kim-可极化/)。
+**延伸阅读（三路线对比）**：与 Korogod (2026) MTP+EDQRd+NAC、Kim (2026) 可极化多极矩 MLIP 的公式对照、$\varepsilon\_e$ 构型依赖与谱学选型，见 [极性材料长程静电三路线对比：Monacelli 插件式 LO-TO、Korogod 可学电荷 NAC 与 Kim 可极化多极矩光谱](/2026/06/07/极性材料长程静电三路线对比-Monacelli-插件式-LO-TO-Korogod-可学电荷-NAC-与-Kim-可极化/)。
 
 ---
 
@@ -559,14 +559,14 @@ $$
 
 Monacelli & Marzari 给出**第一性原理严格**的长程静电修正：**只用量子力学可观测量** $Z$ 与 $\boldsymbol{\varepsilon}$，通过式 **(9)(11)** 及算法微分应力，**插件式**叠加既有短程 MLIP，在 **BaTiO$\_3$** 上恢复 **LO-TO 分裂**与高频声子带隙；**四方相**用立方相参数仍捕获主要介电色散特征。对**谱学、SSCHA、极性材料大规模 MD**——凡依赖正确 **$\Gamma$ 点非解析声子**的场景——该框架提供了一条**不重训**即可启用长程静电的实用路径；下一步是将 $Z(\mathbf{R})$、$\boldsymbol{\varepsilon}(\mathbf{R})$ **环境依赖化**，向三/四代 MLIP 收敛。
 
-与 Korogod / Kim 等 2026 长程 MLIP 路线的横向对比见文末「延伸阅读（站内）」及三路线对比专文（待同步博客）。
+与 Korogod / Kim 等 2026 长程 MLIP 路线的横向对比见 [三路线对比专文](/2026/06/07/极性材料长程静电三路线对比-Monacelli-插件式-LO-TO-Korogod-可学电荷-NAC-与-Kim-可极化/)。
 
 ---
 
 ## 延伸阅读（站内）
 
-- [极性材料长程静电三路线对比：Monacelli 插件式 LO-TO、Korogod 可学电荷 NAC 与 Kim 可极化多极矩光谱](/2026/06/07/极性材料长程静电三路线对比-Monacelli-插件式-LO-TO、Korogod-可学电荷-NAC-与-Kim-可极化/)
-- [不用 DFPT 也能算 LO-TO 分裂？环境依赖电荷长程 MLIP 速读](/2026/05/28/不用-DFPT-也能算-LO-TO-分裂环境依赖电荷长程-MLIP-速读/)
+- [极性材料长程静电三路线对比：Monacelli 插件式 LO-TO、Korogod 可学电荷 NAC 与 Kim 可极化多极矩光谱](/2026/06/07/极性材料长程静电三路线对比-Monacelli-插件式-LO-TO-Korogod-可学电荷-NAC-与-Kim-可极化/)
+- [不用 DFPT 也能算 LO-TO 分裂？环境依赖电荷长程 MLIP 速读](/2026/05/28/不用-DFPT-也能算-LO-TO-分裂-环境依赖电荷长程-MLIP-速读/)
 - [一篇讲透：为什么“可极化多极矩”能让材料力场更懂电学？](/2026/05/16/Kim2026-可极化多极矩长程电静学/)
 
 
