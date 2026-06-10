@@ -3,7 +3,7 @@ layout:     post
 title:      极性材料长程静电与 LO-TO 分裂：Monacelli & Marzari 2026 插件式 MLIP 长程修正解读
 subtitle:   Phys. Rev. B 2026：Born 有效电荷 + 高频介电张量 + η 高斯 smearing + Ewald 傅里叶求和 → 式 (9) 长程能量、(11) 力、(12)–(15) 应力；式 (16)–(19) 复现 LO-TO；可叠加既有 GAP 无需重训；BaTiO₃ benchmark。与 Korogod/Kim 横向对比见 `Monacelli、Korogod（LOTO 文章）与 Kim 多极矩 MLIP/` 专文。
 date:       2026-06-07
-author:     天月将白
+author:     qqz
 header-img: img/post-bg-desk.jpg
 catalog:    true
 tags:

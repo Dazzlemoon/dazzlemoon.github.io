@@ -3,7 +3,7 @@ layout:     post
 title:      极性材料长程静电三路线对比：Monacelli 插件式 LO-TO、Korogod 可学电荷 NAC 与 Kim 可极化多极矩光谱
 subtitle:   2026 三篇 MLIP 长程静电工作横向解读：共同物理核 (★) q→0 非解析 LO-TO；Monacelli 固定 Z/ε 偶极插件、Korogod EDQRd+NAC、Kim 多极+诱导响应+MD IR/Raman；§六详论 ε_∞/ε_e/Z 构型依赖；谱学任务选型与能否互相替代。
 date:       2026-06-07
-author:     天月将白
+author:     qqz
 header-img: img/post-bg-desk.jpg
 catalog:    true
 tags:
