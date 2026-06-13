@@ -1,0 +1,46 @@
+/* Full-width hero portraits (home / about / tags) — show entire image, title below */
+.intro-header-fit {
+  margin-bottom: 0;
+  background: #fff;
+}
+
+.intro-header-fit-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.intro-header-heading {
+  text-align: center;
+  padding: 28px 15px 20px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.intro-header-heading h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 50px;
+  color: #404040;
+}
+
+.intro-header-heading .subheading {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC",
+    "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei",
+    "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC",
+    "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 300;
+  color: #a3a3a3;
+  display: block;
+  margin: 10px 0 0;
+  white-space: pre-line;
+}
+
+@media only screen and (min-width: 768px) {
+  .intro-header-heading h1 {
+    font-size: 80px;
+  }
+}

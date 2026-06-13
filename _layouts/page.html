@@ -2,8 +2,29 @@
 layout: default
 ---
 
+{% assign header_img = page.header-img | default: site.header-img %}
+{% assign header_fit = page.header-img-fit | default: site.header-img-fit %}
+
+{% if header_fit == 'full' %}
+<!-- Page Header — full image, title below -->
+<header class="intro-header-fit">
+    <img class="intro-header-fit-img" src="{{ site.baseurl }}/{{ header_img }}" alt="">
+</header>
+<div class="intro-header-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <span class="subheading">{{ page.description }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{{ header_img }}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
@@ -16,6 +37,7 @@ layout: default
         </div>
     </div>
 </header>
+{% endif %}
 
 <!-- Main Content -->
 <div class="container">
