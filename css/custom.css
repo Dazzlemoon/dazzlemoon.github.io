@@ -1,17 +1,19 @@
-/* Portrait hero: height-limited, centered, title overlaid on image */
+/* Portrait hero: layered background + centered portrait + overlay title */
 .intro-header-fit {
   margin-bottom: 20px;
-  padding: 16px 15px 0;
-  background: #fff;
+  padding: 74px 15px 16px;
+  background: #1f1f1f url("/img/post-bg-desk.jpg") no-repeat center bottom;
+  background-size: cover;
   text-align: center;
 }
 
 .intro-header-fit-inner {
   position: relative;
   display: inline-block;
-  height: min(34vh, 380px);
+  height: min(32vh, 340px);
   max-width: calc(100vw - 30px);
   vertical-align: top;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
 }
 
 .intro-header-fit-img {
@@ -46,12 +48,12 @@
 .intro-header-fit-overlay h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 42px;
-  color: #404040;
+  font-size: 34px;
+  color: #ff6b1a;
   text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.95),
-    0 0 20px rgba(255, 255, 255, 0.85),
-    0 1px 2px rgba(0, 0, 0, 0.15);
+    0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 14px rgba(255, 255, 255, 0.75),
+    0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .intro-header-fit-overlay .subheading {
@@ -61,8 +63,8 @@
     "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   font-size: 17px;
   line-height: 1.6;
-  font-weight: 300;
-  color: #555;
+  font-weight: 400;
+  color: #104a92;
   display: block;
   margin: 8px 0 0;
   white-space: pre-line;
@@ -73,11 +75,11 @@
 
 @media only screen and (min-width: 768px) {
   .intro-header-fit-inner {
-    height: min(40vh, 420px);
+    height: min(34vh, 380px);
   }
 
   .intro-header-fit-overlay h1 {
-    font-size: 64px;
+    font-size: 52px;
   }
 
   .intro-header-fit-overlay .subheading {
@@ -87,10 +89,10 @@
 
 @media only screen and (min-width: 1200px) {
   .intro-header-fit-inner {
-    height: 420px;
+    height: 380px;
   }
 
   .intro-header-fit-overlay h1 {
-    font-size: 72px;
+    font-size: 58px;
   }
 }
