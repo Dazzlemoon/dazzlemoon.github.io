@@ -12,22 +12,24 @@ header-img-fit: full
 
 {% assign header_img = page.header-img | default: site.header-img %}
 
-<!-- Page Header — full image, title below -->
+<!-- Page Header — height-limited portrait, title on image -->
 <header class="intro-header-fit">
-    <img class="intro-header-fit-img" src="{{ site.baseurl }}/{{ header_img }}" alt="">
-</header>
-<div class="intro-header-heading">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading" id="tag-heading">
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <span class="subheading">{{ page.description | newline_to_br }}</span>
+    <div class="intro-header-fit-inner">
+        <img class="intro-header-fit-img" src="{{ site.baseurl }}/{{ header_img }}" alt="">
+        <div class="intro-header-fit-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="site-heading" id="tag-heading">
+                            <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                            <span class="subheading">{{ page.description | newline_to_br }}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</header>
 
 <!-- Main Content -->
 <div class="container">
