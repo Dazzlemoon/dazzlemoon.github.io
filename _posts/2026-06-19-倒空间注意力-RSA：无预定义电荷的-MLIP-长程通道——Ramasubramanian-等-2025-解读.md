@@ -390,21 +390,21 @@ RSA 与 IBZ-PRD 的完整衔接（融合路线、模式分辨、困难取舍）�
 | **超参** | $r\_{\mathrm{cut}}$、MP 层数、$\sigma$（常 5–6 Å） |
 | **代码** | [github.com/rfhari/reciprocal_space_attention](https://github.com/rfhari/reciprocal_space_attention) |
 
-**RSA** 以 **FPE** 编码 Bloch 相位，配合 **Ewald 型 $w\_k$** 与线性 attention，在不引入部分电荷或经验色散项的前提下学习长程 electrostatics/dispersion。LR-MACE 在 SN2、二聚体、随机电荷、NaCl、磷烯剥离与 bulk water $\chi\_{zz}(k)$ 上系统恢复 SR 缺失的长程 asymptotics。延伸讨论（§六）表明 **与 EFA** 分属倒空间 Ewald-attention 与实空间 sinc-attention，面向周期固体/介电 vs 分子各向异性非局域；**与 IBZ-PRD 的衔接**见倒空间方法谱系对比文 §7.6。
+**RSA** 以 **FPE** 编码 Bloch 相位，配合 **Ewald 型 $w\_k$** 与线性 attention，在不引入部分电荷或经验色散项的前提下学习长程 electrostatics/dispersion。LR-MACE 在 SN2、二聚体、随机电荷、NaCl、磷烯剥离与 bulk water $\chi\_{zz}(k)$ 上系统恢复 SR 缺失的长程 asymptotics。延伸讨论（§六）表明 **与 EFA** 分属倒空间 Ewald-attention 与实空间 sinc-attention，面向周期固体/介电 vs 分子各向异性非局域。
 
 ---
 
 ## 延伸阅读（站内）
 
 - [ReciNet：倒空间感知的晶体长程建模——Nie 等 2026 解读](/2026/06/18/ReciNet-倒空间感知的晶体长程建模-Nie-等-2026-解读/)
-
+- [当原子"看见"彼此：EFA 如何让机器学习力场拥有全局视野](/2026/05/25/EFA全局注意力与势函数长程建模/)
+- [布里渊区、不可约布里渊区与高对称路径——从固体物理基础到 PRDNet 的 IBZ 迁移](/2026/05/29/布里渊区-不可约布里渊区与高对称路径-从固体物理基础到-PRDNet-的-IBZ-迁移/)
 
 ## 参考文献（精选）
 
 - Ramasubramanian et al., *Reciprocal Space Attention for Learning Long-Range Interactions*, arXiv:2510.13055 (2025).
 - Frank, J. T., Chmiela, S., Müller, K.-R. & Unke, O., Euclidean Fast Attention, *Nat. Mach. Intell.* **8**, 388–402 (2026). https://doi.org/10.1038/s42256-026-01195-y
 - Batatia et al., MACE, NeurIPS 2022.
-- Cao et al., PRDNet, ICLR 2026（IBZ-PRD 迁移见站内 `2026-reciprocal-space-methods-comparison-blog.md`）.
 - Grisafi & Ceriotti, LODE, JCP 2019.
 - Kosmala et al., Ewald message passing, arXiv:2303.04791.
 - Nie et al., ReciNet, TMLR 2026.
